@@ -1,0 +1,14 @@
+/* Hirely design tokens — adapt to your Tailwind setup */
+:root {
+  --hirely-primary: #3636F1;
+  --hirely-accent: #8B5CF6;
+  --hirely-dark: #0F172A;
+  --hirely-gray: #94A3B8;
+  --hirely-light: #F8FAFC;
+  --hirely-white: #FFFFFF;
+  --hirely-border: #E2E8F0;
+  --hirely-muted: #64748B;
+  --hirely-radius-card: 16px;
+  --hirely-radius-input: 12px;
+  --hirely-shadow-card: 0 8px 30px rgba(15, 23, 42, .06);
+}

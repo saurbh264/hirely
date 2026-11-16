@@ -1,0 +1,38 @@
+{
+  "name": "Hirely",
+  "tagline": "Find your next beginning.",
+  "colors": {
+    "primary": "#3636F1",
+    "accent": "#8B5CF6",
+    "dark": "#0F172A",
+    "gray": "#94A3B8",
+    "light": "#F8FAFC",
+    "white": "#FFFFFF",
+    "border": "#E2E8F0",
+    "muted": "#64748B"
+  },
+  "typography": {
+    "font_family": "Plus Jakarta Sans",
+    "fallback": [
+      "Inter",
+      "ui-sans-serif",
+      "system-ui",
+      "sans-serif"
+    ],
+    "weights": [
+      400,
+      500,
+      600,
+      700,
+      800
+    ]
+  },
+  "radii": {
+    "card": "16px",
+    "button": "999px",
+    "input": "12px"
+  },
+  "shadows": {
+    "card": "0 8px 30px rgba(15, 23, 42, 0.06)"
+  }
+}
