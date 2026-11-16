@@ -15,7 +15,7 @@ const routes = [
   { path: '/employer/jobs/new', component: () => import('@/pages/employer/JobEditorPage.vue'), meta: { layout: 'employer' } },
   { path: '/employer/jobs/:id/edit', component: () => import('@/pages/employer/JobEditorPage.vue'), meta: { layout: 'employer' } },
   { path: '/employer/applicants', component: () => import('@/pages/employer/ApplicantsPage.vue'), meta: { layout: 'employer' } },
-  { path: '/login', component: () => import('@/pages/PreviewPage.vue'), meta: { layout: 'public' } },
+  { path: '/login', component: () => import('@/pages/auth/LoginPage.vue'), meta: { layout: 'public' } },
   { path: '/register', component: () => import('@/pages/PreviewPage.vue'), meta: { layout: 'public' } },
   { path: '/:pathMatch(.*)*', component: () => import('@/pages/PreviewPage.vue'), meta: { layout: 'public' } },
 ]
