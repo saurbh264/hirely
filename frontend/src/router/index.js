@@ -17,7 +17,7 @@ const routes = [
   { path: '/employer/applicants', component: () => import('@/pages/employer/ApplicantsPage.vue'), meta: { layout: 'employer' } },
   { path: '/login', component: () => import('@/pages/auth/LoginPage.vue'), meta: { layout: 'public' } },
   { path: '/register', component: () => import('@/pages/auth/RegisterPage.vue'), meta: { layout: 'public' } },
-  { path: '/:pathMatch(.*)*', component: () => import('@/pages/PreviewPage.vue'), meta: { layout: 'public' } },
+  { path: '/:pathMatch(.*)*', component: () => import('@/pages/NotFoundPage.vue'), meta: { layout: 'public' } },
 ]
 
 export default createRouter({ history: createWebHistory(), routes })
