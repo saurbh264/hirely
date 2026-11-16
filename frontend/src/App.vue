@@ -1,10 +1,7 @@
-<script setup></script>
-
-<template>
-  <div class="min-h-screen flex flex-col items-center justify-center">
-      <h1 class="text-4xl text-red-400">Hirely</h1>
-      <h2  class="text-xl text-blue-300"> Find your next beginning. </h2>
-  </div>
-</template>
-
-<style scoped></style>
+<script setup>
+import PublicLayout from './layouts/PublicLayout.vue'
+import CandidateLayout from './layouts/CandidateLayout.vue'
+import EmployerLayout from './layouts/EmployerLayout.vue'
+const layouts = { public: PublicLayout, candidate: CandidateLayout, employer: EmployerLayout }
+</script>
+<template><RouterView v-slot="{ Component, route }"><component :is="layouts[route.meta.layout] || PublicLayout"><component :is="Component" /></component></RouterView></template>
