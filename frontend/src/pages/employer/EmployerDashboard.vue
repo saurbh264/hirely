@@ -2,12 +2,371 @@
 import StatCard from '@/components/dashboard/StatCard.vue'
 </script>
 <template>
-  <div class="workspace-heading"><div><div class="eyebrow"><span class="eyebrow-dot"></span>Monday, November 16, 2026</div><h1 style="margin-top:10px">Your team’s next great hire.</h1><p>A look at what’s happening across Northstar Studio.</p></div><RouterLink class="btn btn-primary" to="/employer/jobs/new">＋ &nbsp; Post a role</RouterLink></div>
-  <div class="stats-grid"><StatCard label="Active job posts" value="8" note="2 new this week" icon="▤"/><StatCard label="Total applicants" value="246" note="↑ 18%" icon="♙"/><StatCard label="Profile views" value="3.8k" note="↑ 12%" icon="◉"/><StatCard label="Shortlisted" value="24" note="5 need review" icon="✦"/></div>
-  <section class="employer-grid"><div class="card funnel-card"><div class="block-heading"><div><h3>Your hiring momentum</h3><p>Applicants across all open roles</p></div><button class="btn btn-outline btn-sm">Last 30 days⌄</button></div><div class="funnel-total"><strong>246</strong><span>candidates this month</span><b>↑ 18.2%</b></div><div class="bar-chart"><div class="chart-labels"><span>May 1</span><span>May 8</span><span>May 15</span><span>May 22</span><span>May 30</span></div><div class="bars"><i style="height:34%"></i><i style="height:50%"></i><i style="height:40%"></i><i style="height:63%"></i><i style="height:48%"></i><i style="height:74%"></i><i style="height:58%"></i><i style="height:88%"></i><i style="height:65%"></i><i style="height:100%"></i><i style="height:75%"></i><i style="height:91%"></i><i style="height:69%"></i><i style="height:82%"></i></div></div><div class="chart-legend"><i></i> New applicants <span>246 total</span></div></div>
-    <div class="card attention-card"><div class="block-heading"><div><h3>Needs your attention</h3><p>A few good people are waiting.</p></div><span class="attention-count">5</span></div><div class="attention-item"><div class="avatar avatar-blue">JT</div><div><strong>Jordan Taylor</strong><span>Senior Brand Designer</span></div><small>2h ago</small></div><div class="attention-item"><div class="avatar avatar-peach">CS</div><div><strong>Casey Smith</strong><span>Product Marketing Lead</span></div><small>4h ago</small></div><div class="attention-item"><div class="avatar avatar-green">MK</div><div><strong>Morgan Kim</strong><span>Senior Brand Designer</span></div><small>Yesterday</small></div><RouterLink to="/employer/applicants" class="text-link">Review all applicants →</RouterLink></div></section>
-  <section class="card jobs-panel"><div class="block-heading"><div><h3>Your open roles</h3><p>Track performance and see who’s finding their way to you.</p></div><RouterLink to="/employer/jobs" class="text-link">Manage all roles →</RouterLink></div><div class="table-wrap"><table class="data-table"><thead><tr><th>Role</th><th>Status</th><th>Applicants</th><th>Views</th><th>Posted</th><th></th></tr></thead><tbody><tr><td><strong class="role-name">Senior Brand Designer</strong><small class="role-type">Design · Remote</small></td><td><span class="chip chip-green">Active</span></td><td><strong>48</strong> <span class="new-count">+8</span></td><td>1,248</td><td>May 18</td><td><button class="dots">···</button></td></tr><tr><td><strong class="role-name">Product Marketing Lead</strong><small class="role-type">Marketing · Hybrid</small></td><td><span class="chip chip-green">Active</span></td><td><strong>36</strong> <span class="new-count">+3</span></td><td>984</td><td>May 22</td><td><button class="dots">···</button></td></tr><tr><td><strong class="role-name">Senior Frontend Engineer</strong><small class="role-type">Engineering · Remote</small></td><td><span class="chip chip-green">Active</span></td><td><strong>29</strong></td><td>756</td><td>May 25</td><td><button class="dots">···</button></td></tr></tbody></table></div></section>
+  <div class="workspace-heading">
+    <div>
+      <div class="eyebrow"><span class="eyebrow-dot"></span>Monday, November 16, 2026</div>
+      <h1 style="margin-top:10px">Your team’s next great hire.</h1>
+      <p>A look at what’s happening across Northstar Studio.</p>
+    </div>
+    <RouterLink class="btn btn-primary" to="/employer/jobs/new">＋ &nbsp; Post a role</RouterLink>
+  </div>
+  <div class="stats-grid">
+    <StatCard label="Active job posts" value="8" note="2 new this week" icon="▤" />
+    <StatCard label="Total applicants" value="246" note="↑ 18%" icon="♙" />
+    <StatCard label="Profile views" value="3.8k" note="↑ 12%" icon="◉" />
+    <StatCard label="Shortlisted" value="24" note="5 need review" icon="✦" />
+  </div>
+  <section class="employer-grid">
+    <div class="card funnel-card">
+      <div class="block-heading">
+        <div>
+          <h3>Your hiring momentum</h3>
+          <p>Applicants across all open roles</p>
+        </div><button class="btn btn-outline btn-sm">Last 30 days⌄</button>
+      </div>
+      <div class="funnel-total"><strong>246</strong><span>candidates this month</span><b>↑ 18.2%</b></div>
+      <div class="bar-chart">
+        <div class="chart-labels"><span>May 1</span><span>May 8</span><span>May 15</span><span>May 22</span><span>May
+            30</span></div>
+        <div class="bars"><i style="height:34%"></i><i style="height:50%"></i><i style="height:40%"></i><i
+            style="height:63%"></i><i style="height:48%"></i><i style="height:74%"></i><i style="height:58%"></i><i
+            style="height:88%"></i><i style="height:65%"></i><i style="height:100%"></i><i style="height:75%"></i><i
+            style="height:91%"></i><i style="height:69%"></i><i style="height:82%"></i></div>
+      </div>
+      <div class="chart-legend"><i></i> New applicants <span>246 total</span></div>
+    </div>
+    <div class="card attention-card">
+      <div class="block-heading">
+        <div>
+          <h3>Needs your attention</h3>
+          <p>A few good people are waiting.</p>
+        </div><span class="attention-count">5</span>
+      </div>
+      <div class="attention-item">
+        <div class="avatar avatar-blue">JT</div>
+        <div><strong>Jordan Taylor</strong><span>Senior Brand Designer</span></div><small>2h ago</small>
+      </div>
+      <div class="attention-item">
+        <div class="avatar avatar-peach">CS</div>
+        <div><strong>Casey Smith</strong><span>Product Marketing Lead</span></div><small>4h ago</small>
+      </div>
+      <div class="attention-item">
+        <div class="avatar avatar-green">MK</div>
+        <div><strong>Morgan Kim</strong><span>Senior Brand Designer</span></div><small>Yesterday</small>
+      </div>
+      <RouterLink to="/employer/applicants" class="text-link">Review all applicants →</RouterLink>
+    </div>
+  </section>
+  <section class="card jobs-panel">
+    <div class="block-heading">
+      <div>
+        <h3>Your open roles</h3>
+        <p>Track performance and see who’s finding their way to you.</p>
+      </div>
+      <RouterLink to="/employer/jobs" class="text-link">Manage all roles →</RouterLink>
+    </div>
+    <div class="table-wrap">
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Role</th>
+            <th>Status</th>
+            <th>Applicants</th>
+            <th>Views</th>
+            <th>Posted</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong class="role-name">Senior Brand Designer</strong><small class="role-type">Design · Remote</small>
+            </td>
+            <td><span class="chip chip-green">Active</span></td>
+            <td><strong>48</strong> <span class="new-count">+8</span></td>
+            <td>1,248</td>
+            <td>May 18</td>
+            <td><button class="dots">···</button></td>
+          </tr>
+          <tr>
+            <td><strong class="role-name">Product Marketing Lead</strong><small class="role-type">Marketing ·
+                Hybrid</small></td>
+            <td><span class="chip chip-green">Active</span></td>
+            <td><strong>36</strong> <span class="new-count">+3</span></td>
+            <td>984</td>
+            <td>May 22</td>
+            <td><button class="dots">···</button></td>
+          </tr>
+          <tr>
+            <td><strong class="role-name">Senior Frontend Engineer</strong><small class="role-type">Engineering ·
+                Remote</small></td>
+            <td><span class="chip chip-green">Active</span></td>
+            <td><strong>29</strong></td>
+            <td>756</td>
+            <td>May 25</td>
+            <td><button class="dots">···</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
 </template>
 <style scoped>
-.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:13px}.employer-grid{display:grid;grid-template-columns:1.6fr 1fr;gap:15px;margin-top:16px}.funnel-card,.attention-card,.jobs-panel{padding:21px}.block-heading{display:flex;align-items:start;justify-content:space-between;gap:12px}.block-heading h3{margin:0 0 5px;font-size:14px}.block-heading p{margin:0;color:#64748b;font-size:12px}.funnel-total{display:flex;align-items:baseline;gap:10px;margin-top:22px}.funnel-total strong{font-size:28px;letter-spacing:-.05em}.funnel-total span{color:#64748b;font-size:12px}.funnel-total b{margin-left:auto;color:#16834c;font-size:12px}.bar-chart{position:relative;height:170px;margin-top:20px;border-bottom:1px solid #e8ebf2;background:repeating-linear-gradient(to bottom,transparent 0,transparent 41px,#eef1f5 42px)}.bars{position:absolute;inset:0 5px 0;display:flex;align-items:end;justify-content:space-around;gap:10px}.bars i{width:100%;max-width:27px;border-radius:5px 5px 0 0;background:linear-gradient(180deg,#8d84fa,#5d57df)}.bars i:nth-child(3n){background:#c2bcff}.chart-labels{position:absolute;right:0;bottom:-18px;left:0;display:flex;justify-content:space-between;color:#64748b;font-size:12px}.chart-legend{display:flex;align-items:center;gap:7px;margin-top:27px;color:#64748b;font-size:12px}.chart-legend i{width:8px;height:8px;border-radius:3px;background:#645ce3}.chart-legend span{margin-left:auto;color:#64748b}.attention-count{width:23px;height:23px;display:grid;place-items:center;border-radius:7px;color:#a46009;background:#fff7e8;font-size:12px;font-weight:800}.attention-item{display:flex;align-items:center;gap:10px;padding:15px 0;border-bottom:1px solid #f0f2f6}.attention-item .avatar{width:35px;height:35px;font-size:12px}.attention-item>div:nth-child(2){flex:1}.attention-item strong,.attention-item span{display:block}.attention-item strong{font-size:12px}.attention-item span,.attention-item small{margin-top:4px;color:#64748b;font-size:12px}.attention-item .muted{color:#64748b}.attention-item small{white-space:nowrap}.attention-card>.text-link{display:block;margin-top:15px;font-size:12px}.text-link{color:var(--brand);font-size:12px;font-weight:700}.jobs-panel{margin-top:16px}.jobs-panel .block-heading{margin-bottom:14px}.role-name,.role-type{display:block}.role-name{font-size:12px}.role-type{margin-top:4px;color:#64748b;font-size:12px}.new-count{margin-left:4px;color:#16834c;font-size:12px}.dots{border:0;color:#64748b;background:none}@media(max-width:950px){.stats-grid{grid-template-columns:repeat(2,1fr)}.employer-grid{grid-template-columns:1fr}}@media(max-width:650px){.stats-grid{grid-template-columns:1fr 1fr}.stats-grid :deep(.stat-card){padding:15px}.stats-grid :deep(.stat-number){font-size:23px}.employer-grid{gap:12px}.funnel-card,.attention-card,.jobs-panel{padding:16px}.workspace-heading :deep(.btn){width:100%}}
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 13px
+}
+
+.employer-grid {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr;
+  gap: 15px;
+  margin-top: 16px
+}
+
+.funnel-card,
+.attention-card,
+.jobs-panel {
+  padding: 21px
+}
+
+.block-heading {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 12px
+}
+
+.block-heading h3 {
+  margin: 0 0 5px;
+  font-size: 14px
+}
+
+.block-heading p {
+  margin: 0;
+  color: #64748b;
+  font-size: 12px
+}
+
+.funnel-total {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  margin-top: 22px
+}
+
+.funnel-total strong {
+  font-size: 28px;
+  letter-spacing: -.05em
+}
+
+.funnel-total span {
+  color: #64748b;
+  font-size: 12px
+}
+
+.funnel-total b {
+  margin-left: auto;
+  color: #16834c;
+  font-size: 12px
+}
+
+.bar-chart {
+  position: relative;
+  height: 170px;
+  margin-top: 20px;
+  border-bottom: 1px solid #e8ebf2;
+  background: repeating-linear-gradient(to bottom, transparent 0, transparent 41px, #eef1f5 42px)
+}
+
+.bars {
+  position: absolute;
+  inset: 0 5px 0;
+  display: flex;
+  align-items: end;
+  justify-content: space-around;
+  gap: 10px
+}
+
+.bars i {
+  width: 100%;
+  max-width: 27px;
+  border-radius: 5px 5px 0 0;
+  background: linear-gradient(180deg, #8d84fa, #5d57df)
+}
+
+.bars i:nth-child(3n) {
+  background: #c2bcff
+}
+
+.chart-labels {
+  position: absolute;
+  right: 0;
+  bottom: -18px;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  color: #64748b;
+  font-size: 12px
+}
+
+.chart-legend {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin-top: 27px;
+  color: #64748b;
+  font-size: 12px
+}
+
+.chart-legend i {
+  width: 8px;
+  height: 8px;
+  border-radius: 3px;
+  background: #645ce3
+}
+
+.chart-legend span {
+  margin-left: auto;
+  color: #64748b
+}
+
+.attention-count {
+  width: 23px;
+  height: 23px;
+  display: grid;
+  place-items: center;
+  border-radius: 7px;
+  color: #a46009;
+  background: #fff7e8;
+  font-size: 12px;
+  font-weight: 800
+}
+
+.attention-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 15px 0;
+  border-bottom: 1px solid #f0f2f6
+}
+
+.attention-item .avatar {
+  width: 35px;
+  height: 35px;
+  font-size: 12px
+}
+
+.attention-item>div:nth-child(2) {
+  flex: 1
+}
+
+.attention-item strong,
+.attention-item span {
+  display: block
+}
+
+.attention-item strong {
+  font-size: 12px
+}
+
+.attention-item span,
+.attention-item small {
+  margin-top: 4px;
+  color: #64748b;
+  font-size: 12px
+}
+
+.attention-item .muted {
+  color: #64748b
+}
+
+.attention-item small {
+  white-space: nowrap
+}
+
+.attention-card>.text-link {
+  display: block;
+  margin-top: 15px;
+  font-size: 12px
+}
+
+.text-link {
+  color: var(--brand);
+  font-size: 12px;
+  font-weight: 700
+}
+
+.jobs-panel {
+  margin-top: 16px
+}
+
+.jobs-panel .block-heading {
+  margin-bottom: 14px
+}
+
+.role-name,
+.role-type {
+  display: block
+}
+
+.role-name {
+  font-size: 12px
+}
+
+.role-type {
+  margin-top: 4px;
+  color: #64748b;
+  font-size: 12px
+}
+
+.new-count {
+  margin-left: 4px;
+  color: #16834c;
+  font-size: 12px
+}
+
+.dots {
+  border: 0;
+  color: #64748b;
+  background: none
+}
+
+@media(max-width:950px) {
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr)
+  }
+
+  .employer-grid {
+    grid-template-columns: 1fr
+  }
+}
+
+@media(max-width:650px) {
+  .stats-grid {
+    grid-template-columns: 1fr 1fr
+  }
+
+  .stats-grid :deep(.stat-card) {
+    padding: 15px
+  }
+
+  .stats-grid :deep(.stat-number) {
+    font-size: 23px
+  }
+
+  .employer-grid {
+    gap: 12px
+  }
+
+  .funnel-card,
+  .attention-card,
+  .jobs-panel {
+    padding: 16px
+  }
+
+  .workspace-heading :deep(.btn) {
+    width: 100%
+  }
+}
 </style>

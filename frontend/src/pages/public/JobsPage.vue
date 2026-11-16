@@ -4,11 +4,294 @@ import JobCard from '@/components/jobs/JobCard.vue'
 import { jobs } from '@/data/mockData'
 </script>
 <template>
-  <PageIntro eyebrow="Your next move" title="Find work that fits." description="Explore roles from thoughtful teams building things that matter."><div class="search-row card"><label class="search-part"><span>⌕</span><input placeholder="Role, skill, or company" aria-label="Role, skill, or company" /></label><label class="search-part"><span>⌖</span><input placeholder="City, state, or remote" aria-label="Location" /></label><button class="btn btn-primary">Search jobs <span>→</span></button></div></PageIntro>
-  <section class="container jobs-browser"><aside class="filter-panel card"><div class="filter-head"><strong>Filters</strong><button class="clear-btn">Clear all</button></div><div class="filter-group"><strong>Workplace</strong><label><input type="checkbox" checked /> Remote <span>248</span></label><label><input type="checkbox" /> Hybrid <span>164</span></label><label><input type="checkbox" /> On-site <span>96</span></label></div><div class="divider"></div><div class="filter-group"><strong>Job type</strong><label><input type="checkbox" /> Full-time <span>372</span></label><label><input type="checkbox" /> Contract <span>42</span></label><label><input type="checkbox" /> Part-time <span>18</span></label></div><div class="divider"></div><div class="filter-group"><strong>Experience level</strong><label><input type="checkbox" /> Entry level <span>82</span></label><label><input type="checkbox" /> Mid level <span>203</span></label><label><input type="checkbox" /> Senior level <span>154</span></label></div><div class="divider"></div><div class="filter-group"><strong>Salary range</strong><div class="salary-display">$80k <span>to</span> $200k+</div><input class="range" type="range" min="0" max="100" value="65" aria-label="Salary range" /></div><div class="filter-tip"><span>✦</span><p><strong>Good to know</strong><br />Every role on Hirely includes a salary range.</p></div></aside>
-    <div class="results"><div class="results-toolbar"><div><strong>528 opportunities</strong><span> · Handpicked for curious people</span></div><label>Sort by <select aria-label="Sort jobs"><option>Most relevant</option><option>Newest</option><option>Salary</option></select></label></div><div class="job-grid"><JobCard v-for="job in jobs" :key="job.id" :job="job" /></div><div class="pagination"><button class="page-number active">1</button><button class="page-number">2</button><button class="page-number">3</button><span>...</span><button class="page-number">12</button><button class="btn btn-outline btn-sm">Next <span>→</span></button></div></div>
+  <PageIntro eyebrow="Your next move" title="Find work that fits."
+    description="Explore roles from thoughtful teams building things that matter.">
+    <div class="search-row card"><label class="search-part"><span>⌕</span><input placeholder="Role, skill, or company"
+          aria-label="Role, skill, or company" /></label><label class="search-part"><span>⌖</span><input
+          placeholder="City, state, or remote" aria-label="Location" /></label><button class="btn btn-primary">Search
+        jobs <span>→</span></button></div>
+  </PageIntro>
+  <section class="container jobs-browser">
+    <aside class="filter-panel card">
+      <div class="filter-head"><strong>Filters</strong><button class="clear-btn">Clear all</button></div>
+      <div class="filter-group"><strong>Workplace</strong><label><input type="checkbox" checked /> Remote
+          <span>248</span></label><label><input type="checkbox" /> Hybrid <span>164</span></label><label><input
+            type="checkbox" /> On-site <span>96</span></label></div>
+      <div class="divider"></div>
+      <div class="filter-group"><strong>Job type</strong><label><input type="checkbox" /> Full-time
+          <span>372</span></label><label><input type="checkbox" /> Contract <span>42</span></label><label><input
+            type="checkbox" /> Part-time <span>18</span></label></div>
+      <div class="divider"></div>
+      <div class="filter-group"><strong>Experience level</strong><label><input type="checkbox" /> Entry level
+          <span>82</span></label><label><input type="checkbox" /> Mid level <span>203</span></label><label><input
+            type="checkbox" /> Senior level <span>154</span></label></div>
+      <div class="divider"></div>
+      <div class="filter-group"><strong>Salary range</strong>
+        <div class="salary-display">$80k <span>to</span> $200k+</div><input class="range" type="range" min="0" max="100"
+          value="65" aria-label="Salary range" />
+      </div>
+      <div class="filter-tip"><span>✦</span>
+        <p><strong>Good to know</strong><br />Every role on Hirely includes a salary range.</p>
+      </div>
+    </aside>
+    <div class="results">
+      <div class="results-toolbar">
+        <div><strong>528 opportunities</strong><span> · Handpicked for curious people</span></div><label>Sort by <select
+            aria-label="Sort jobs">
+            <option>Most relevant</option>
+            <option>Newest</option>
+            <option>Salary</option>
+          </select></label>
+      </div>
+      <div class="job-grid">
+        <JobCard v-for="job in jobs" :key="job.id" :job="job" />
+      </div>
+      <div class="pagination"><button class="page-number active">1</button><button class="page-number">2</button><button
+          class="page-number">3</button><span>...</span><button class="page-number">12</button><button
+          class="btn btn-outline btn-sm">Next <span>→</span></button></div>
+    </div>
   </section>
 </template>
 <style scoped>
-.search-row{display:flex;align-items:center;gap:8px;max-width:810px;margin-top:28px;padding:8px}.search-part{min-height:46px;display:flex;align-items:center;gap:10px;flex:1;padding:0 12px;border-right:1px solid #edf0f4}.search-part span{color:#818cf8;font-size:18px}.search-part input{width:100%;border:0;outline:0;font-size:14px}.search-part input::placeholder{color:#64748b}.jobs-browser{display:grid;grid-template-columns:225px 1fr;gap:25px;padding-top:32px;padding-bottom:75px}.filter-panel{align-self:start;padding:20px}.filter-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:22px;font-size:14px}.clear-btn{border:0;background:none;color:var(--brand);font-size:12px;font-weight:700}.filter-group{display:grid;gap:13px;padding:19px 0}.filter-group>strong{margin-bottom:2px;font-size:12px}.filter-group label{display:flex;align-items:center;gap:9px;color:#64748b;font-size:12px}.filter-group label span{margin-left:auto;color:#64748b}.filter-group input[type=checkbox]{accent-color:var(--brand)}.salary-display{display:flex;justify-content:space-between;color:#475569;font-size:12px}.salary-display span{color:#64748b}.range{width:100%;accent-color:var(--brand)}.filter-tip{display:flex;gap:10px;margin-top:13px;padding:13px;border-radius:11px;background:#f5f4ff;color:#7453d5}.filter-tip>span{font-size:14px}.filter-tip p{margin:0;color:#72798a;font-size:12px;line-height:1.7}.filter-tip strong{color:#41368f}.results-toolbar{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:16px;color:#64748b;font-size:12px}.results-toolbar strong{color:#0f172a;font-size:14px}.results-toolbar label{display:flex;align-items:center;gap:5px}.results-toolbar select{border:0;background:none;color:#334155;font-size:12px;font-weight:700}.job-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.job-grid :deep(.card){padding:19px}.pagination{display:flex;align-items:center;justify-content:center;gap:7px;padding-top:25px}.page-number{width:34px;height:34px;border:1px solid var(--line);border-radius:9px;background:#fff;color:#64748b;font-size:12px}.page-number.active{border-color:var(--brand);color:#fff;background:var(--brand)}@media(max-width:900px){.jobs-browser{grid-template-columns:190px 1fr;gap:16px}.job-grid{grid-template-columns:1fr}}@media(max-width:680px){.search-row{align-items:stretch;flex-direction:column}.search-part{min-height:40px;border-right:0;border-bottom:1px solid #edf0f4}.search-row .btn{width:100%}.jobs-browser{grid-template-columns:1fr;padding-top:20px}.filter-panel{display:none}.results-toolbar{align-items:start;flex-direction:column}.job-grid{grid-template-columns:1fr}}
+.search-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  max-width: 810px;
+  margin-top: 28px;
+  padding: 8px
+}
+
+.search-part {
+  min-height: 46px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+  padding: 0 12px;
+  border-right: 1px solid #edf0f4
+}
+
+.search-part span {
+  color: #818cf8;
+  font-size: 18px
+}
+
+.search-part input {
+  width: 100%;
+  border: 0;
+  outline: 0;
+  font-size: 14px
+}
+
+.search-part input::placeholder {
+  color: #64748b
+}
+
+.jobs-browser {
+  display: grid;
+  grid-template-columns: 225px 1fr;
+  gap: 25px;
+  padding-top: 32px;
+  padding-bottom: 75px
+}
+
+.filter-panel {
+  align-self: start;
+  padding: 20px
+}
+
+.filter-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 22px;
+  font-size: 14px
+}
+
+.clear-btn {
+  border: 0;
+  background: none;
+  color: var(--brand);
+  font-size: 12px;
+  font-weight: 700
+}
+
+.filter-group {
+  display: grid;
+  gap: 13px;
+  padding: 19px 0
+}
+
+.filter-group>strong {
+  margin-bottom: 2px;
+  font-size: 12px
+}
+
+.filter-group label {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: #64748b;
+  font-size: 12px
+}
+
+.filter-group label span {
+  margin-left: auto;
+  color: #64748b
+}
+
+.filter-group input[type=checkbox] {
+  accent-color: var(--brand)
+}
+
+.salary-display {
+  display: flex;
+  justify-content: space-between;
+  color: #475569;
+  font-size: 12px
+}
+
+.salary-display span {
+  color: #64748b
+}
+
+.range {
+  width: 100%;
+  accent-color: var(--brand)
+}
+
+.filter-tip {
+  display: flex;
+  gap: 10px;
+  margin-top: 13px;
+  padding: 13px;
+  border-radius: 11px;
+  background: #f5f4ff;
+  color: #7453d5
+}
+
+.filter-tip>span {
+  font-size: 14px
+}
+
+.filter-tip p {
+  margin: 0;
+  color: #72798a;
+  font-size: 12px;
+  line-height: 1.7
+}
+
+.filter-tip strong {
+  color: #41368f
+}
+
+.results-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 16px;
+  color: #64748b;
+  font-size: 12px
+}
+
+.results-toolbar strong {
+  color: #0f172a;
+  font-size: 14px
+}
+
+.results-toolbar label {
+  display: flex;
+  align-items: center;
+  gap: 5px
+}
+
+.results-toolbar select {
+  border: 0;
+  background: none;
+  color: #334155;
+  font-size: 12px;
+  font-weight: 700
+}
+
+.job-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px
+}
+
+.job-grid :deep(.card) {
+  padding: 19px
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  padding-top: 25px
+}
+
+.page-number {
+  width: 34px;
+  height: 34px;
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  background: #fff;
+  color: #64748b;
+  font-size: 12px
+}
+
+.page-number.active {
+  border-color: var(--brand);
+  color: #fff;
+  background: var(--brand)
+}
+
+@media(max-width:900px) {
+  .jobs-browser {
+    grid-template-columns: 190px 1fr;
+    gap: 16px
+  }
+
+  .job-grid {
+    grid-template-columns: 1fr
+  }
+}
+
+@media(max-width:680px) {
+  .search-row {
+    align-items: stretch;
+    flex-direction: column
+  }
+
+  .search-part {
+    min-height: 40px;
+    border-right: 0;
+    border-bottom: 1px solid #edf0f4
+  }
+
+  .search-row .btn {
+    width: 100%
+  }
+
+  .jobs-browser {
+    grid-template-columns: 1fr;
+    padding-top: 20px
+  }
+
+  .filter-panel {
+    display: none
+  }
+
+  .results-toolbar {
+    align-items: start;
+    flex-direction: column
+  }
+
+  .job-grid {
+    grid-template-columns: 1fr
+  }
+}
 </style>

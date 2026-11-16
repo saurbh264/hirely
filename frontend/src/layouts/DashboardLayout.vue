@@ -21,11 +21,31 @@ const userTitle = computed(() => props.kind === 'employer' ? 'Hiring team' : 'Pr
     <aside class="sidebar">
       <RouterLink to="/"><img class="sidebar-logo" src="/brand/hirely-wordmark.svg" alt="Hirely" /></RouterLink>
       <div class="sidebar-label">Workspace</div>
-      <RouterLink v-for="link in links" :key="link.to" class="side-link" :class="{ 'router-link-active': route.path === link.to || (link.to !== '/candidate' && link.to !== '/employer' && route.path.startsWith(link.to)) }" :to="link.to"><span class="side-icon">{{ link.icon }}</span>{{ link.label }}</RouterLink>
-      <div class="sidebar-bottom"><div class="sidebar-label">Explore</div><RouterLink class="side-link" to="/jobs"><span class="side-icon">⌕</span>Browse jobs</RouterLink><RouterLink class="side-link" to="/companies"><span class="side-icon">▦</span>Companies</RouterLink>
-        <div class="sidebar-user"><div class="avatar">{{ props.kind === 'employer' ? 'NS' : 'AM' }}</div><div><strong>{{ brandName }}</strong><span>{{ userTitle }}</span></div></div>
+      <RouterLink v-for="link in links" :key="link.to" class="side-link"
+        :class="{ 'router-link-active': route.path === link.to || (link.to !== '/candidate' && link.to !== '/employer' && route.path.startsWith(link.to)) }"
+        :to="link.to"><span class="side-icon">{{ link.icon }}</span>{{ link.label }}</RouterLink>
+      <div class="sidebar-bottom">
+        <div class="sidebar-label">Explore</div>
+        <RouterLink class="side-link" to="/jobs"><span class="side-icon">⌕</span>Browse jobs</RouterLink>
+        <RouterLink class="side-link" to="/companies"><span class="side-icon">▦</span>Companies</RouterLink>
+        <div class="sidebar-user">
+          <div class="avatar">{{ props.kind === 'employer' ? 'NS' : 'AM' }}</div>
+          <div><strong>{{ brandName }}</strong><span>{{ userTitle }}</span></div>
+        </div>
       </div>
     </aside>
-    <div class="workspace"><header class="workspace-topbar"><div class="crumb">{{ props.kind === 'employer' ? 'Employer workspace' : 'Candidate workspace' }} &nbsp; / &nbsp; Hirely</div><div class="top-actions"><span class="muted" style="font-size:14px">⌕</span><span class="muted" style="font-size:14px">♧</span><div class="avatar">{{ props.kind === 'employer' ? 'NS' : 'AM' }}</div></div></header><main class="workspace-content"><slot /></main></div>
+    <div class="workspace">
+      <header class="workspace-topbar">
+        <div class="crumb">{{ props.kind === 'employer' ? 'Employer workspace' : 'Candidate workspace' }} &nbsp; /
+          &nbsp; Hirely</div>
+        <div class="top-actions"><span class="muted" style="font-size:14px">⌕</span><span class="muted"
+            style="font-size:14px">♧</span>
+          <div class="avatar">{{ props.kind === 'employer' ? 'NS' : 'AM' }}</div>
+        </div>
+      </header>
+      <main class="workspace-content">
+        <slot />
+      </main>
+    </div>
   </div>
 </template>
