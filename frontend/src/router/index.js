@@ -3,7 +3,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 const routes = [
   { path: '/', component: () => import('@/pages/public/HomePage.vue'), meta: { layout: 'public' } },
   { path: '/jobs', component: () => import('@/pages/public/JobsPage.vue'), meta: { layout: 'public' } },
-  { path: '/jobs/:id', component: () => import('@/pages/PreviewPage.vue'), meta: { layout: 'public' } },
+  { path: '/jobs/:id', component: () => import('@/pages/public/JobDetailPage.vue'), meta: { layout: 'public' } },
   { path: '/companies', component: () => import('@/pages/PreviewPage.vue'), meta: { layout: 'public' } },
   { path: '/companies/:id', component: () => import('@/pages/PreviewPage.vue'), meta: { layout: 'public' } },
   { path: '/candidate', component: () => import('@/pages/PreviewPage.vue'), meta: { layout: 'candidate' } },
