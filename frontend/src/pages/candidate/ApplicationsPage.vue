@@ -1,9 +1,413 @@
 <template>
-  <div class="workspace-heading"><div><h1>Your applications</h1><p>Every small step is still a step forward.</p></div><RouterLink class="btn btn-primary" to="/jobs">Find more roles <span>→</span></RouterLink></div>
-  <div class="application-overview"><div class="card overview-item"><span class="overview-icon purple">▤</span><div><strong>12</strong><small>Total applications</small></div></div><div class="card overview-item"><span class="overview-icon amber">◷</span><div><strong>5</strong><small>In review</small></div></div><div class="card overview-item"><span class="overview-icon blue">✦</span><div><strong>2</strong><small>Interviewing</small></div></div><div class="card overview-item"><span class="overview-icon green">✓</span><div><strong>3</strong><small>Responses</small></div></div></div>
-  <section class="card application-panel"><div class="panel-toolbar"><div class="tabs"><button class="selected">All applications <i>12</i></button><button>In progress <i>7</i></button><button>Archived <i>5</i></button></div><div class="toolbar-controls"><label>Sort <select><option>Most recent</option><option>Oldest</option></select></label><button class="btn btn-outline btn-sm">☷ &nbsp; Filter</button></div></div><div class="table-wrap"><table class="data-table"><thead><tr><th>Position</th><th>Status</th><th>Applied</th><th>Last update</th><th></th></tr></thead><tbody><tr><td><div class="position-cell"><div class="icon-box">L</div><div><strong>Senior Product Designer</strong><small>Linear · Remote</small></div></div></td><td><span class="status status-review">In review</span></td><td>May 28, 2025</td><td>2 days ago</td><td><button class="dots">···</button></td></tr><tr><td><div class="position-cell"><div class="icon-box" style="color:#8f5bff;background:#f5efff">F</div><div><strong>Product Manager, Growth</strong><small>Figma · New York, NY</small></div></div></td><td><span class="status status-interview">Interviewing</span></td><td>May 24, 2025</td><td>Yesterday</td><td><button class="dots">···</button></td></tr><tr><td><div class="position-cell"><div class="icon-box" style="color:#101010;background:#f4f4f4">N</div><div><strong>Brand Designer</strong><small>Notion · San Francisco, CA</small></div></div></td><td><span class="status status-submitted">Submitted</span></td><td>May 21, 2025</td><td>4 days ago</td><td><button class="dots">···</button></td></tr><tr><td><div class="position-cell"><div class="icon-box" style="color:#4353ff;background:#eef0ff">W</div><div><strong>Content Strategist</strong><small>Webflow · Remote</small></div></div></td><td><span class="status status-review">In review</span></td><td>May 18, 2025</td><td>1 week ago</td><td><button class="dots">···</button></td></tr><tr><td><div class="position-cell"><div class="icon-box" style="color:#ff5a5f;background:#fff0f0">A</div><div><strong>UX Researcher</strong><small>Airbnb · Seattle, WA</small></div></div></td><td><span class="status status-closed">Not moving forward</span></td><td>May 12, 2025</td><td>May 20, 2025</td><td><button class="dots">···</button></td></tr></tbody></table></div><div class="table-foot"><span>Showing <strong>5</strong> of <strong>12</strong> applications</span><div><button class="pager">←</button><button class="pager current">1</button><button class="pager">2</button><button class="pager">3</button><button class="pager">→</button></div></div></section>
-  <aside class="application-tip"><span>✦</span><div><strong>A little encouragement</strong><p>Most teams respond within 7–10 days. Keep showing up for yourself while you wait.</p></div><RouterLink to="/jobs" class="text-link">Find your next role →</RouterLink></aside>
+  <div class="workspace-heading">
+    <div>
+      <h1>Your applications</h1>
+      <p>Every small step is still a step forward.</p>
+    </div>
+    <RouterLink class="btn btn-primary" to="/jobs">Find more roles <span>→</span></RouterLink>
+  </div>
+  <div class="application-overview">
+    <div class="card overview-item"><span class="overview-icon purple">▤</span>
+      <div><strong>12</strong><small>Total applications</small></div>
+    </div>
+    <div class="card overview-item"><span class="overview-icon amber">◷</span>
+      <div><strong>5</strong><small>In review</small></div>
+    </div>
+    <div class="card overview-item"><span class="overview-icon blue">✦</span>
+      <div><strong>2</strong><small>Interviewing</small></div>
+    </div>
+    <div class="card overview-item"><span class="overview-icon green">✓</span>
+      <div><strong>3</strong><small>Responses</small></div>
+    </div>
+  </div>
+  <section class="card application-panel">
+    <div class="panel-toolbar">
+      <div class="tabs"><button class="selected">All applications <i>12</i></button><button>In progress
+          <i>7</i></button><button>Archived <i>5</i></button></div>
+      <div class="toolbar-controls"><label>Sort <select>
+            <option>Most recent</option>
+            <option>Oldest</option>
+          </select></label><button class="btn btn-outline btn-sm">☷ &nbsp; Filter</button></div>
+    </div>
+    <div class="table-wrap">
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Position</th>
+            <th>Status</th>
+            <th>Applied</th>
+            <th>Last update</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <div class="position-cell">
+                <div class="icon-box">L</div>
+                <div><strong>Senior Product Designer</strong><small>Linear · Remote</small></div>
+              </div>
+            </td>
+            <td><span class="status status-review">In review</span></td>
+            <td>May 28, 2025</td>
+            <td>2 days ago</td>
+            <td><button class="dots">···</button></td>
+          </tr>
+          <tr>
+            <td>
+              <div class="position-cell">
+                <div class="icon-box" style="color:#8f5bff;background:#f5efff">F</div>
+                <div><strong>Product Manager, Growth</strong><small>Figma · New York, NY</small></div>
+              </div>
+            </td>
+            <td><span class="status status-interview">Interviewing</span></td>
+            <td>May 24, 2025</td>
+            <td>Yesterday</td>
+            <td><button class="dots">···</button></td>
+          </tr>
+          <tr>
+            <td>
+              <div class="position-cell">
+                <div class="icon-box" style="color:#101010;background:#f4f4f4">N</div>
+                <div><strong>Brand Designer</strong><small>Notion · San Francisco, CA</small></div>
+              </div>
+            </td>
+            <td><span class="status status-submitted">Submitted</span></td>
+            <td>May 21, 2025</td>
+            <td>4 days ago</td>
+            <td><button class="dots">···</button></td>
+          </tr>
+          <tr>
+            <td>
+              <div class="position-cell">
+                <div class="icon-box" style="color:#4353ff;background:#eef0ff">W</div>
+                <div><strong>Content Strategist</strong><small>Webflow · Remote</small></div>
+              </div>
+            </td>
+            <td><span class="status status-review">In review</span></td>
+            <td>May 18, 2025</td>
+            <td>1 week ago</td>
+            <td><button class="dots">···</button></td>
+          </tr>
+          <tr>
+            <td>
+              <div class="position-cell">
+                <div class="icon-box" style="color:#ff5a5f;background:#fff0f0">A</div>
+                <div><strong>UX Researcher</strong><small>Airbnb · Seattle, WA</small></div>
+              </div>
+            </td>
+            <td><span class="status status-closed">Not moving forward</span></td>
+            <td>May 12, 2025</td>
+            <td>May 20, 2025</td>
+            <td><button class="dots">···</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="table-foot"><span>Showing <strong>5</strong> of <strong>12</strong> applications</span>
+      <div><button class="pager">←</button><button class="pager current">1</button><button
+          class="pager">2</button><button class="pager">3</button><button class="pager">→</button></div>
+    </div>
+  </section>
+  <aside class="application-tip"><span>✦</span>
+    <div><strong>A little encouragement</strong>
+      <p>Most teams respond within 7–10 days. Keep showing up for yourself while you wait.</p>
+    </div>
+    <RouterLink to="/jobs" class="text-link">Find your next role →</RouterLink>
+  </aside>
 </template>
 <style scoped>
-.application-overview{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:17px}.overview-item{display:flex;align-items:center;gap:12px;padding:17px}.overview-icon{width:36px;height:36px;display:grid;place-items:center;border-radius:11px;font-size:14px}.purple{color:#7254d6;background:#f1edff}.amber{color:#c17b21;background:#fff5e5}.blue{color:#5466d9;background:#edf0ff}.green{color:#198351;background:#eaf8ef}.overview-item strong,.overview-item small{display:block}.overview-item strong{font-size:20px;letter-spacing:-.04em}.overview-item small{margin-top:3px;color:#64748b;font-size:12px}.application-panel{overflow:hidden}.panel-toolbar{display:flex;align-items:center;justify-content:space-between;gap:15px;padding:17px 20px;border-bottom:1px solid var(--line)}.tabs{display:flex;gap:18px}.tabs button{position:relative;padding:4px 0;border:0;color:#64748b;background:none;font-size:12px;font-weight:650}.tabs button.selected{color:var(--brand)}.tabs i{margin-left:4px;padding:3px 5px;border-radius:7px;background:#f0efff;font-size:12px;font-style:normal}.toolbar-controls{display:flex;align-items:center;gap:10px}.toolbar-controls label{color:#64748b;font-size:12px}.toolbar-controls select{border:0;background:transparent;color:#475569;font-size:12px;font-weight:700}.position-cell{display:flex;align-items:center;gap:10px}.position-cell .icon-box{width:35px;height:35px}.position-cell strong,.position-cell small{display:block}.position-cell strong{color:#0f172a;font-size:12px}.position-cell small{margin-top:4px;color:#64748b;font-size:12px}.status{display:inline-block;padding:6px 8px;border-radius:99px;font-size:12px;font-weight:700}.status-review{color:#a46009;background:#fff7e8}.status-interview{color:#6550bd;background:#f1efff}.status-submitted{color:#475569;background:#f1f5f9}.status-closed{color:#b2525b;background:#fff0f1}.dots{border:0;color:#64748b;background:none;font-size:16px}.table-foot{display:flex;align-items:center;justify-content:space-between;padding:13px 17px;color:#64748b;font-size:12px}.table-foot strong{color:#475569}.pager{width:26px;height:26px;border:0;border-radius:7px;color:#64748b;background:#fff;font-size:12px}.pager.current{color:#fff;background:var(--brand)}.application-tip{display:flex;align-items:center;gap:13px;margin-top:17px;padding:16px;border:1px solid #e8e5fb;border-radius:14px;background:#faf9ff}.application-tip>span{width:33px;height:33px;display:grid;place-items:center;border-radius:10px;color:#7559d5;background:#f0edff}.application-tip div{flex:1}.application-tip strong{font-size:12px}.application-tip p{margin:4px 0 0;color:#64748b;font-size:12px}.application-tip .text-link{font-size:12px}@media(max-width:850px){.application-overview{grid-template-columns:repeat(2,1fr)}.panel-toolbar{align-items:start;flex-direction:column}.table-wrap{max-width:calc(100vw - 275px)}}@media(max-width:650px){.application-overview{grid-template-columns:1fr 1fr}.panel-toolbar{padding:14px}.tabs{gap:12px}.tabs button{font-size:12px}.table-wrap{max-width:calc(100vw - 34px)}.application-tip{align-items:start;flex-wrap:wrap}.application-tip .text-link{margin-left:46px}}
+.application-overview {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-bottom: 17px
+}
+
+.overview-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 17px
+}
+
+.overview-icon {
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  border-radius: 11px;
+  font-size: 14px
+}
+
+.purple {
+  color: #7254d6;
+  background: #f1edff
+}
+
+.amber {
+  color: #c17b21;
+  background: #fff5e5
+}
+
+.blue {
+  color: #5466d9;
+  background: #edf0ff
+}
+
+.green {
+  color: #198351;
+  background: #eaf8ef
+}
+
+.overview-item strong,
+.overview-item small {
+  display: block
+}
+
+.overview-item strong {
+  font-size: 20px;
+  letter-spacing: -.04em
+}
+
+.overview-item small {
+  margin-top: 3px;
+  color: #64748b;
+  font-size: 12px
+}
+
+.application-panel {
+  overflow: hidden
+}
+
+.panel-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 17px 20px;
+  border-bottom: 1px solid var(--line)
+}
+
+.tabs {
+  display: flex;
+  gap: 18px
+}
+
+.tabs button {
+  position: relative;
+  padding: 4px 0;
+  border: 0;
+  color: #64748b;
+  background: none;
+  font-size: 12px;
+  font-weight: 650
+}
+
+.tabs button.selected {
+  color: var(--brand)
+}
+
+.tabs i {
+  margin-left: 4px;
+  padding: 3px 5px;
+  border-radius: 7px;
+  background: #f0efff;
+  font-size: 12px;
+  font-style: normal
+}
+
+.toolbar-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px
+}
+
+.toolbar-controls label {
+  color: #64748b;
+  font-size: 12px
+}
+
+.toolbar-controls select {
+  border: 0;
+  background: transparent;
+  color: #475569;
+  font-size: 12px;
+  font-weight: 700
+}
+
+.position-cell {
+  display: flex;
+  align-items: center;
+  gap: 10px
+}
+
+.position-cell .icon-box {
+  width: 35px;
+  height: 35px
+}
+
+.position-cell strong,
+.position-cell small {
+  display: block
+}
+
+.position-cell strong {
+  color: #0f172a;
+  font-size: 12px
+}
+
+.position-cell small {
+  margin-top: 4px;
+  color: #64748b;
+  font-size: 12px
+}
+
+.status {
+  display: inline-block;
+  padding: 6px 8px;
+  border-radius: 99px;
+  font-size: 12px;
+  font-weight: 700
+}
+
+.status-review {
+  color: #a46009;
+  background: #fff7e8
+}
+
+.status-interview {
+  color: #6550bd;
+  background: #f1efff
+}
+
+.status-submitted {
+  color: #475569;
+  background: #f1f5f9
+}
+
+.status-closed {
+  color: #b2525b;
+  background: #fff0f1
+}
+
+.dots {
+  border: 0;
+  color: #64748b;
+  background: none;
+  font-size: 16px
+}
+
+.table-foot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 13px 17px;
+  color: #64748b;
+  font-size: 12px
+}
+
+.table-foot strong {
+  color: #475569
+}
+
+.pager {
+  width: 26px;
+  height: 26px;
+  border: 0;
+  border-radius: 7px;
+  color: #64748b;
+  background: #fff;
+  font-size: 12px
+}
+
+.pager.current {
+  color: #fff;
+  background: var(--brand)
+}
+
+.application-tip {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  margin-top: 17px;
+  padding: 16px;
+  border: 1px solid #e8e5fb;
+  border-radius: 14px;
+  background: #faf9ff
+}
+
+.application-tip>span {
+  width: 33px;
+  height: 33px;
+  display: grid;
+  place-items: center;
+  border-radius: 10px;
+  color: #7559d5;
+  background: #f0edff
+}
+
+.application-tip div {
+  flex: 1
+}
+
+.application-tip strong {
+  font-size: 12px
+}
+
+.application-tip p {
+  margin: 4px 0 0;
+  color: #64748b;
+  font-size: 12px
+}
+
+.application-tip .text-link {
+  font-size: 12px
+}
+
+@media(max-width:850px) {
+  .application-overview {
+    grid-template-columns: repeat(2, 1fr)
+  }
+
+  .panel-toolbar {
+    align-items: start;
+    flex-direction: column
+  }
+
+  .table-wrap {
+    max-width: calc(100vw - 275px)
+  }
+}
+
+@media(max-width:650px) {
+  .application-overview {
+    grid-template-columns: 1fr 1fr
+  }
+
+  .panel-toolbar {
+    padding: 14px
+  }
+
+  .tabs {
+    gap: 12px
+  }
+
+  .tabs button {
+    font-size: 12px
+  }
+
+  .table-wrap {
+    max-width: calc(100vw - 34px)
+  }
+
+  .application-tip {
+    align-items: start;
+    flex-wrap: wrap
+  }
+
+  .application-tip .text-link {
+    margin-left: 46px
+  }
+}
 </style>

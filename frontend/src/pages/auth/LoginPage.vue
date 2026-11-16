@@ -1,6 +1,268 @@
 <template>
-  <section class="auth-shell"><aside class="auth-aside"><RouterLink to="/"><img src="/brand/hirely-wordmark-dark.svg" alt="Hirely" style="width:128px" /></RouterLink><div><div class="auth-kicker"><span></span>Find your next beginning</div><h2>Good things happen when you find your place.</h2><p>Welcome back. Your next chapter is still out there, and we’ll help you find it.</p><div class="auth-quote"><div class="facepile"><i>JM</i><i>SK</i><i>RL</i><i>+</i></div><span>Made for people who care about where they work.</span></div></div><small class="aside-foot">© 2025 Hirely, Inc. &nbsp; · &nbsp; A little closer to what’s next.</small></aside><div class="auth-form-side"><div class="auth-form"><div class="mobile-logo"><img src="/brand/hirely-wordmark.svg" alt="Hirely" /></div><div class="welcome">Welcome back 👋</div><h1>Log in to Hirely</h1><p class="lead">Pick up right where your next chapter begins.</p><button class="social-btn"><span class="google-g">G</span> Continue with Google</button><div class="or-line"><span></span>or continue with email<span></span></div><div class="form-stack"><label class="field"><span>Email address</span><input class="input" type="email" placeholder="you@example.com" /></label><label class="field"><span style="display:flex;justify-content:space-between">Password <a class="forgot">Forgot password?</a></span><input class="input" type="password" placeholder="Enter your password" /></label><button class="btn btn-primary sign-in">Log in <span>→</span></button></div><p class="signup">New to Hirely? <RouterLink to="/register">Create an account</RouterLink></p><small class="terms">By continuing, you agree to our <a>Terms of Service</a> and <a>Privacy Policy</a>.</small></div></div></section>
+  <section class="auth-shell">
+    <aside class="auth-aside">
+      <RouterLink to="/"><img src="/brand/hirely-wordmark-dark.svg" alt="Hirely" style="width:128px" /></RouterLink>
+      <div>
+        <div class="auth-kicker"><span></span>Find your next beginning</div>
+        <h2>Good things happen when you find your place.</h2>
+        <p>Welcome back. Your next chapter is still out there, and we’ll help you find it.</p>
+        <div class="auth-quote">
+          <div class="facepile"><i>JM</i><i>SK</i><i>RL</i><i>+</i></div><span>Made for people who care about where they
+            work.</span>
+        </div>
+      </div><small class="aside-foot">© 2025 Hirely, Inc. &nbsp; · &nbsp; A little closer to what’s next.</small>
+    </aside>
+    <div class="auth-form-side">
+      <div class="auth-form">
+        <div class="mobile-logo"><img src="/brand/hirely-wordmark.svg" alt="Hirely" /></div>
+        <div class="welcome">Welcome back 👋</div>
+        <h1>Log in to Hirely</h1>
+        <p class="lead">Pick up right where your next chapter begins.</p><button class="social-btn"><span
+            class="google-g">G</span> Continue with Google</button>
+        <div class="or-line"><span></span>or continue with email<span></span></div>
+        <div class="form-stack"><label class="field"><span>Email address</span><input class="input" type="email"
+              placeholder="you@example.com" /></label><label class="field"><span
+              style="display:flex;justify-content:space-between">Password <a class="forgot">Forgot
+                password?</a></span><input class="input" type="password"
+              placeholder="Enter your password" /></label><button class="btn btn-primary sign-in">Log in
+            <span>→</span></button></div>
+        <p class="signup">New to Hirely? <RouterLink to="/register">Create an account</RouterLink>
+        </p><small class="terms">By continuing, you agree to our <a>Terms of Service</a> and <a>Privacy
+            Policy</a>.</small>
+      </div>
+    </div>
+  </section>
 </template>
 <style scoped>
-.auth-aside{position:relative;overflow:hidden}.auth-aside:after{position:absolute;right:-100px;bottom:50px;width:320px;height:320px;border:1px solid #ffffff2a;border-radius:50%;box-shadow:0 0 0 35px #ffffff0c,0 0 0 70px #ffffff08;content:''}.auth-kicker{display:flex;align-items:center;gap:8px;color:#dbd9ff;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}.auth-kicker span{width:7px;height:7px;border-radius:50%;background:#b7a7ff}.auth-aside h2{margin-top:20px}.auth-quote{display:flex;align-items:center;gap:13px;margin-top:35px;padding-top:19px;border-top:1px solid #ffffff40;color:#e4e3ff;font-size:12px}.facepile{display:flex}.facepile i{width:26px;height:26px;display:grid;place-items:center;margin-left:-5px;border:2px solid #5041dd;border-radius:50%;color:#5472a6;background:#e7f0ff;font-size:12px;font-style:normal;font-weight:800}.facepile i:first-child{margin-left:0;color:#a55e36;background:#ffeada}.facepile i:nth-child(2){color:#635cbb;background:#e9e8ff}.facepile i:nth-child(3){color:#428667;background:#e5f6ed}.facepile i:last-child{color:#64748b;background:#f4f5f8}.aside-foot{color:#c6c5ff;font-size:12px}.auth-form-side{background:linear-gradient(180deg,#fff,#fbfbff)}.auth-form{width:min(380px,100%)}.mobile-logo{display:none}.welcome{margin-bottom:9px;color:#7a5bd4;font-size:12px;font-weight:700}.auth-form h1{font-size:30px}.auth-form .lead{margin-bottom:24px;font-size:14px}.social-btn{width:100%;height:43px;display:flex;align-items:center;justify-content:center;gap:10px;border:1px solid var(--line);border-radius:10px;color:#334155;background:#fff;font-size:12px;font-weight:650}.google-g{font-size:15px;font-weight:800;background:conic-gradient(from 45deg,#4285f4 0 25%,#34a853 0 50%,#fbbc05 0 75%,#ea4335 0);background-clip:text;color:transparent}.or-line{display:flex;align-items:center;gap:11px;margin:20px 0;color:#64748b;font-size:12px}.or-line span{height:1px;flex:1;background:#e9edf3}.form-stack{display:grid;gap:15px}.field{gap:7px}.field>span{font-size:12px}.field .input{min-height:43px;font-size:12px}.forgot{color:#6656c7;font-size:12px}.sign-in{width:100%;margin-top:3px}.signup{margin:20px 0 16px;text-align:center;color:#64748b;font-size:12px}.signup a,.terms a{color:var(--brand);font-weight:700}.terms{display:block;text-align:center;color:#64748b;font-size:12px}.terms a{font-weight:600}@media(max-width:680px){.mobile-logo{display:block;margin-bottom:38px}.mobile-logo img{width:115px}.auth-form-side{background:#fff}.auth-form{max-width:390px}}
+.auth-aside {
+  position: relative;
+  overflow: hidden
+}
+
+.auth-aside:after {
+  position: absolute;
+  right: -100px;
+  bottom: 50px;
+  width: 320px;
+  height: 320px;
+  border: 1px solid #ffffff2a;
+  border-radius: 50%;
+  box-shadow: 0 0 0 35px #ffffff0c, 0 0 0 70px #ffffff08;
+  content: ''
+}
+
+.auth-kicker {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #dbd9ff;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase
+}
+
+.auth-kicker span {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #b7a7ff
+}
+
+.auth-aside h2 {
+  margin-top: 20px
+}
+
+.auth-quote {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  margin-top: 35px;
+  padding-top: 19px;
+  border-top: 1px solid #ffffff40;
+  color: #e4e3ff;
+  font-size: 12px
+}
+
+.facepile {
+  display: flex
+}
+
+.facepile i {
+  width: 26px;
+  height: 26px;
+  display: grid;
+  place-items: center;
+  margin-left: -5px;
+  border: 2px solid #5041dd;
+  border-radius: 50%;
+  color: #5472a6;
+  background: #e7f0ff;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 800
+}
+
+.facepile i:first-child {
+  margin-left: 0;
+  color: #a55e36;
+  background: #ffeada
+}
+
+.facepile i:nth-child(2) {
+  color: #635cbb;
+  background: #e9e8ff
+}
+
+.facepile i:nth-child(3) {
+  color: #428667;
+  background: #e5f6ed
+}
+
+.facepile i:last-child {
+  color: #64748b;
+  background: #f4f5f8
+}
+
+.aside-foot {
+  color: #c6c5ff;
+  font-size: 12px
+}
+
+.auth-form-side {
+  background: linear-gradient(180deg, #fff, #fbfbff)
+}
+
+.auth-form {
+  width: min(380px, 100%)
+}
+
+.mobile-logo {
+  display: none
+}
+
+.welcome {
+  margin-bottom: 9px;
+  color: #7a5bd4;
+  font-size: 12px;
+  font-weight: 700
+}
+
+.auth-form h1 {
+  font-size: 30px
+}
+
+.auth-form .lead {
+  margin-bottom: 24px;
+  font-size: 14px
+}
+
+.social-btn {
+  width: 100%;
+  height: 43px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  color: #334155;
+  background: #fff;
+  font-size: 12px;
+  font-weight: 650
+}
+
+.google-g {
+  font-size: 15px;
+  font-weight: 800;
+  background: conic-gradient(from 45deg, #4285f4 0 25%, #34a853 0 50%, #fbbc05 0 75%, #ea4335 0);
+  background-clip: text;
+  color: transparent
+}
+
+.or-line {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  margin: 20px 0;
+  color: #64748b;
+  font-size: 12px
+}
+
+.or-line span {
+  height: 1px;
+  flex: 1;
+  background: #e9edf3
+}
+
+.form-stack {
+  display: grid;
+  gap: 15px
+}
+
+.field {
+  gap: 7px
+}
+
+.field>span {
+  font-size: 12px
+}
+
+.field .input {
+  min-height: 43px;
+  font-size: 12px
+}
+
+.forgot {
+  color: #6656c7;
+  font-size: 12px
+}
+
+.sign-in {
+  width: 100%;
+  margin-top: 3px
+}
+
+.signup {
+  margin: 20px 0 16px;
+  text-align: center;
+  color: #64748b;
+  font-size: 12px
+}
+
+.signup a,
+.terms a {
+  color: var(--brand);
+  font-weight: 700
+}
+
+.terms {
+  display: block;
+  text-align: center;
+  color: #64748b;
+  font-size: 12px
+}
+
+.terms a {
+  font-weight: 600
+}
+
+@media(max-width:680px) {
+  .mobile-logo {
+    display: block;
+    margin-bottom: 38px
+  }
+
+  .mobile-logo img {
+    width: 115px
+  }
+
+  .auth-form-side {
+    background: #fff
+  }
+
+  .auth-form {
+    max-width: 390px
+  }
+}
 </style>

@@ -3,10 +3,409 @@ import { jobs } from '@/data/mockData'
 const job = jobs[0]
 </script>
 <template>
-  <section class="detail-cover"><div class="container"><RouterLink to="/jobs" class="back-link">← &nbsp; Back to all jobs</RouterLink><div class="detail-title"><div class="icon-box brand-mark">L</div><div><div class="eyebrow"><span class="eyebrow-dot"></span>Featured opportunity</div><h1>Senior Product Designer</h1><p>Linear <span>·</span> Remote, North America <span>·</span> Posted 2 days ago</p></div></div><div class="detail-chips"><span class="chip chip-purple">Full-time</span><span class="chip">Remote</span><span class="chip">Design</span></div></div></section>
-  <section class="container detail-layout"><article class="detail-content"><div class="detail-meta card"><div><span>Compensation</span><strong>$145,000 – $180,000 <small>/ year</small></strong></div><div><span>Experience</span><strong>5+ years</strong></div><div><span>Employment</span><strong>Full-time</strong></div></div><div class="detail-section"><h2>About the role</h2><p>At Linear, we believe the best tools feel like an extension of your thinking. We’re looking for a Senior Product Designer to help shape how modern product teams plan and build their work.</p><p>You’ll partner closely with product and engineering to take complex workflows and make them feel clear, fast, and genuinely enjoyable. This is a chance to have meaningful influence on a product used by ambitious teams around the world.</p></div><div class="detail-section"><h2>What you’ll do</h2><ul><li>Lead design for meaningful product areas from first sketch through polished release.</li><li>Bring clarity to complex workflows with strong systems thinking and visual craft.</li><li>Collaborate closely with product managers, engineers, and fellow designers.</li><li>Help shape our design language and raise the quality bar across the product.</li></ul></div><div class="detail-section"><h2>What we’re looking for</h2><ul><li>5+ years of experience designing thoughtful digital products.</li><li>A portfolio that shows strong interaction design and attention to detail.</li><li>Comfort navigating ambiguity and turning early ideas into clear direction.</li><li>Clear communication and a generous, collaborative approach.</li></ul></div><div class="detail-section benefits"><h2>Benefits &amp; perks</h2><div class="benefit-grid"><span>✦ &nbsp;Competitive salary & equity</span><span>◷ &nbsp;Flexible time off</span><span>⌂ &nbsp;Remote-first team</span><span>♡ &nbsp;Health & wellness</span></div></div></article><aside class="detail-sidebar"><div class="apply-card card"><span class="chip chip-green">Actively reviewing</span><h3>Ready to make your move?</h3><p>It takes about 5 minutes to apply. You’ve got this.</p><button class="btn btn-primary apply-button">Apply for this role <span>→</span></button><button class="btn btn-outline save-button">♡ &nbsp; Save for later</button><div class="divider" style="margin:20px 0"></div><small class="muted">Share this opportunity</small><div class="share-actions"><button>in</button><button>𝕏</button><button>↗</button><button>⌁</button></div></div><div class="company-card card"><div class="company-header"><div class="icon-box brand-mark">L</div><span class="chip">Verified</span></div><h3>Linear</h3><p class="muted">Building the issue tracking tool you’ll enjoy using.</p><div class="company-facts"><span>◈ &nbsp;Productivity software</span><span>♧ &nbsp;51–200 people</span><span>⌖ &nbsp;San Francisco, CA</span></div><RouterLink to="/companies/linear" class="text-link">View company profile →</RouterLink></div></aside></section>
-  <section class="container related"><div class="section-head"><div><h2>More roles to explore</h2><p>Good things tend to come in threes.</p></div><RouterLink class="text-link" to="/jobs">See all jobs →</RouterLink></div><div class="related-row"><RouterLink v-for="item in jobs.slice(1,4)" :key="item.id" :to="`/jobs/${item.id}`" class="related-card card"><div class="icon-box" :style="{color:item.color,background:item.tint,border:0}">{{ item.mark }}</div><div><strong>{{ item.title }}</strong><span>{{ item.company }} · {{ item.location.split('·')[0] }}</span></div><b>↗</b></RouterLink></div></section>
+  <section class="detail-cover">
+    <div class="container">
+      <RouterLink to="/jobs" class="back-link">← &nbsp; Back to all jobs</RouterLink>
+      <div class="detail-title">
+        <div class="icon-box brand-mark">L</div>
+        <div>
+          <div class="eyebrow"><span class="eyebrow-dot"></span>Featured opportunity</div>
+          <h1>Senior Product Designer</h1>
+          <p>Linear <span>·</span> Remote, North America <span>·</span> Posted 2 days ago</p>
+        </div>
+      </div>
+      <div class="detail-chips"><span class="chip chip-purple">Full-time</span><span class="chip">Remote</span><span
+          class="chip">Design</span></div>
+    </div>
+  </section>
+  <section class="container detail-layout">
+    <article class="detail-content">
+      <div class="detail-meta card">
+        <div><span>Compensation</span><strong>$145,000 – $180,000 <small>/ year</small></strong></div>
+        <div><span>Experience</span><strong>5+ years</strong></div>
+        <div><span>Employment</span><strong>Full-time</strong></div>
+      </div>
+      <div class="detail-section">
+        <h2>About the role</h2>
+        <p>At Linear, we believe the best tools feel like an extension of your thinking. We’re looking for a Senior
+          Product Designer to help shape how modern product teams plan and build their work.</p>
+        <p>You’ll partner closely with product and engineering to take complex workflows and make them feel clear, fast,
+          and genuinely enjoyable. This is a chance to have meaningful influence on a product used by ambitious teams
+          around the world.</p>
+      </div>
+      <div class="detail-section">
+        <h2>What you’ll do</h2>
+        <ul>
+          <li>Lead design for meaningful product areas from first sketch through polished release.</li>
+          <li>Bring clarity to complex workflows with strong systems thinking and visual craft.</li>
+          <li>Collaborate closely with product managers, engineers, and fellow designers.</li>
+          <li>Help shape our design language and raise the quality bar across the product.</li>
+        </ul>
+      </div>
+      <div class="detail-section">
+        <h2>What we’re looking for</h2>
+        <ul>
+          <li>5+ years of experience designing thoughtful digital products.</li>
+          <li>A portfolio that shows strong interaction design and attention to detail.</li>
+          <li>Comfort navigating ambiguity and turning early ideas into clear direction.</li>
+          <li>Clear communication and a generous, collaborative approach.</li>
+        </ul>
+      </div>
+      <div class="detail-section benefits">
+        <h2>Benefits &amp; perks</h2>
+        <div class="benefit-grid"><span>✦ &nbsp;Competitive salary & equity</span><span>◷ &nbsp;Flexible time
+            off</span><span>⌂ &nbsp;Remote-first team</span><span>♡ &nbsp;Health & wellness</span></div>
+      </div>
+    </article>
+    <aside class="detail-sidebar">
+      <div class="apply-card card"><span class="chip chip-green">Actively reviewing</span>
+        <h3>Ready to make your move?</h3>
+        <p>It takes about 5 minutes to apply. You’ve got this.</p><button class="btn btn-primary apply-button">Apply for
+          this role <span>→</span></button><button class="btn btn-outline save-button">♡ &nbsp; Save for later</button>
+        <div class="divider" style="margin:20px 0"></div><small class="muted">Share this opportunity</small>
+        <div class="share-actions"><button>in</button><button>𝕏</button><button>↗</button><button>⌁</button></div>
+      </div>
+      <div class="company-card card">
+        <div class="company-header">
+          <div class="icon-box brand-mark">L</div><span class="chip">Verified</span>
+        </div>
+        <h3>Linear</h3>
+        <p class="muted">Building the issue tracking tool you’ll enjoy using.</p>
+        <div class="company-facts"><span>◈ &nbsp;Productivity software</span><span>♧ &nbsp;51–200 people</span><span>⌖
+            &nbsp;San Francisco, CA</span></div>
+        <RouterLink to="/companies/linear" class="text-link">View company profile →</RouterLink>
+      </div>
+    </aside>
+  </section>
+  <section class="container related">
+    <div class="section-head">
+      <div>
+        <h2>More roles to explore</h2>
+        <p>Good things tend to come in threes.</p>
+      </div>
+      <RouterLink class="text-link" to="/jobs">See all jobs →</RouterLink>
+    </div>
+    <div class="related-row">
+      <RouterLink v-for="item in jobs.slice(1, 4)" :key="item.id" :to="`/jobs/${item.id}`" class="related-card card">
+        <div class="icon-box" :style="{ color: item.color, background: item.tint, border: 0 }">{{ item.mark }}</div>
+        <div><strong>{{ item.title }}</strong><span>{{ item.company }} · {{ item.location.split('·')[0] }}</span></div>
+        <b>↗</b>
+      </RouterLink>
+    </div>
+  </section>
 </template>
 <style scoped>
-.detail-cover{padding:34px 0 31px;border-bottom:1px solid #eceef5;background:linear-gradient(130deg,#f8f8ff,#fff 72%)}.back-link{display:inline-block;margin-bottom:28px;color:#64748b;font-size:12px;font-weight:650}.back-link:hover{color:var(--brand)}.detail-title{display:flex;align-items:center;gap:19px}.brand-mark{width:62px;height:62px;color:#5e6ad2;background:#f0f1ff;border:0;font-size:23px}.detail-title h1{margin:8px 0 7px;font-size:36px}.detail-title p{margin:0;color:#64748b;font-size:14px}.detail-title p span{margin:0 8px;color:#c0c6d0}.detail-chips{display:flex;gap:8px;margin:21px 0 0 81px}.detail-layout{display:grid;grid-template-columns:minmax(0,1fr) 315px;align-items:start;gap:28px;padding-top:32px}.detail-meta{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;padding:20px}.detail-meta span,.detail-meta strong{display:block}.detail-meta span{margin-bottom:9px;color:#64748b;font-size:12px}.detail-meta strong{font-size:14px}.detail-meta small{color:#64748b;font-size:12px;font-weight:500}.detail-section{padding:28px 4px;border-bottom:1px solid #edf0f5}.detail-section h2{margin-bottom:14px;font-size:21px}.detail-section p,.detail-section li{color:#64748b;font-size:14px;line-height:1.9}.detail-section p:last-child{margin-bottom:0}.detail-section ul{display:grid;gap:9px;margin:0;padding-left:19px}.detail-section li::marker{color:#8b5cf6}.benefit-grid{display:grid;grid-template-columns:1fr 1fr;gap:13px}.benefit-grid span{color:#526072;font-size:12px}.detail-sidebar{display:grid;gap:15px}.apply-card,.company-card{padding:21px}.apply-card h3{margin:16px 0 7px;font-size:17px}.apply-card p{margin-bottom:17px;color:#64748b;font-size:12px;line-height:1.7}.apply-button,.save-button{width:100%;margin-top:8px}.share-actions{display:flex;gap:9px;margin-top:11px}.share-actions button{width:31px;height:31px;border:1px solid var(--line);border-radius:8px;color:#64748b;background:#fff;font-size:12px;font-weight:700}.company-header{display:flex;align-items:center;justify-content:space-between}.company-card h3{margin-top:17px}.company-card>p{font-size:12px;line-height:1.7}.company-facts{display:grid;gap:12px;margin:18px 0;color:#64748b;font-size:12px}.company-card .text-link{display:block;padding-top:14px;border-top:1px solid var(--line);font-size:12px}.related{padding-top:65px;padding-bottom:70px}.related .section-head{margin-bottom:20px}.related .section-head h2{font-size:23px}.related-row{display:grid;grid-template-columns:repeat(3,1fr);gap:13px}.related-card{display:flex;align-items:center;gap:11px;padding:15px}.related-card strong,.related-card span{display:block}.related-card strong{font-size:12px}.related-card span{margin-top:5px;color:#64748b;font-size:12px}.related-card>b{margin-left:auto;color:#64748b}@media(max-width:800px){.detail-layout{grid-template-columns:1fr}.detail-sidebar{grid-template-columns:1fr 1fr}.related-row{grid-template-columns:1fr}}@media(max-width:600px){.detail-title{align-items:start}.detail-title h1{font-size:27px}.brand-mark{width:48px;height:48px}.detail-chips{margin-left:0}.detail-meta{grid-template-columns:1fr}.detail-meta>div{padding-bottom:10px;border-bottom:1px solid #f1f5f9}.detail-meta>div:last-child{padding:0;border:0}.detail-sidebar{grid-template-columns:1fr}.related-row{grid-template-columns:1fr}.benefit-grid{grid-template-columns:1fr}}
+.detail-cover {
+  padding: 34px 0 31px;
+  border-bottom: 1px solid #eceef5;
+  background: linear-gradient(130deg, #f8f8ff, #fff 72%)
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 28px;
+  color: #64748b;
+  font-size: 12px;
+  font-weight: 650
+}
+
+.back-link:hover {
+  color: var(--brand)
+}
+
+.detail-title {
+  display: flex;
+  align-items: center;
+  gap: 19px
+}
+
+.brand-mark {
+  width: 62px;
+  height: 62px;
+  color: #5e6ad2;
+  background: #f0f1ff;
+  border: 0;
+  font-size: 23px
+}
+
+.detail-title h1 {
+  margin: 8px 0 7px;
+  font-size: 36px
+}
+
+.detail-title p {
+  margin: 0;
+  color: #64748b;
+  font-size: 14px
+}
+
+.detail-title p span {
+  margin: 0 8px;
+  color: #c0c6d0
+}
+
+.detail-chips {
+  display: flex;
+  gap: 8px;
+  margin: 21px 0 0 81px
+}
+
+.detail-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 315px;
+  align-items: start;
+  gap: 28px;
+  padding-top: 32px
+}
+
+.detail-meta {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  padding: 20px
+}
+
+.detail-meta span,
+.detail-meta strong {
+  display: block
+}
+
+.detail-meta span {
+  margin-bottom: 9px;
+  color: #64748b;
+  font-size: 12px
+}
+
+.detail-meta strong {
+  font-size: 14px
+}
+
+.detail-meta small {
+  color: #64748b;
+  font-size: 12px;
+  font-weight: 500
+}
+
+.detail-section {
+  padding: 28px 4px;
+  border-bottom: 1px solid #edf0f5
+}
+
+.detail-section h2 {
+  margin-bottom: 14px;
+  font-size: 21px
+}
+
+.detail-section p,
+.detail-section li {
+  color: #64748b;
+  font-size: 14px;
+  line-height: 1.9
+}
+
+.detail-section p:last-child {
+  margin-bottom: 0
+}
+
+.detail-section ul {
+  display: grid;
+  gap: 9px;
+  margin: 0;
+  padding-left: 19px
+}
+
+.detail-section li::marker {
+  color: #8b5cf6
+}
+
+.benefit-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 13px
+}
+
+.benefit-grid span {
+  color: #526072;
+  font-size: 12px
+}
+
+.detail-sidebar {
+  display: grid;
+  gap: 15px
+}
+
+.apply-card,
+.company-card {
+  padding: 21px
+}
+
+.apply-card h3 {
+  margin: 16px 0 7px;
+  font-size: 17px
+}
+
+.apply-card p {
+  margin-bottom: 17px;
+  color: #64748b;
+  font-size: 12px;
+  line-height: 1.7
+}
+
+.apply-button,
+.save-button {
+  width: 100%;
+  margin-top: 8px
+}
+
+.share-actions {
+  display: flex;
+  gap: 9px;
+  margin-top: 11px
+}
+
+.share-actions button {
+  width: 31px;
+  height: 31px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  color: #64748b;
+  background: #fff;
+  font-size: 12px;
+  font-weight: 700
+}
+
+.company-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between
+}
+
+.company-card h3 {
+  margin-top: 17px
+}
+
+.company-card>p {
+  font-size: 12px;
+  line-height: 1.7
+}
+
+.company-facts {
+  display: grid;
+  gap: 12px;
+  margin: 18px 0;
+  color: #64748b;
+  font-size: 12px
+}
+
+.company-card .text-link {
+  display: block;
+  padding-top: 14px;
+  border-top: 1px solid var(--line);
+  font-size: 12px
+}
+
+.related {
+  padding-top: 65px;
+  padding-bottom: 70px
+}
+
+.related .section-head {
+  margin-bottom: 20px
+}
+
+.related .section-head h2 {
+  font-size: 23px
+}
+
+.related-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 13px
+}
+
+.related-card {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  padding: 15px
+}
+
+.related-card strong,
+.related-card span {
+  display: block
+}
+
+.related-card strong {
+  font-size: 12px
+}
+
+.related-card span {
+  margin-top: 5px;
+  color: #64748b;
+  font-size: 12px
+}
+
+.related-card>b {
+  margin-left: auto;
+  color: #64748b
+}
+
+@media(max-width:800px) {
+  .detail-layout {
+    grid-template-columns: 1fr
+  }
+
+  .detail-sidebar {
+    grid-template-columns: 1fr 1fr
+  }
+
+  .related-row {
+    grid-template-columns: 1fr
+  }
+}
+
+@media(max-width:600px) {
+  .detail-title {
+    align-items: start
+  }
+
+  .detail-title h1 {
+    font-size: 27px
+  }
+
+  .brand-mark {
+    width: 48px;
+    height: 48px
+  }
+
+  .detail-chips {
+    margin-left: 0
+  }
+
+  .detail-meta {
+    grid-template-columns: 1fr
+  }
+
+  .detail-meta>div {
+    padding-bottom: 10px;
+    border-bottom: 1px solid #f1f5f9
+  }
+
+  .detail-meta>div:last-child {
+    padding: 0;
+    border: 0
+  }
+
+  .detail-sidebar {
+    grid-template-columns: 1fr
+  }
+
+  .related-row {
+    grid-template-columns: 1fr
+  }
+
+  .benefit-grid {
+    grid-template-columns: 1fr
+  }
+}
 </style>

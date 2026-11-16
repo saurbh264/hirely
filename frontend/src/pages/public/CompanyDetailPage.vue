@@ -3,9 +3,447 @@ import { companies, jobs } from '@/data/mockData'
 const company = companies[0]
 </script>
 <template>
-  <section class="company-hero"><div class="container"><RouterLink to="/companies" class="back-link">← &nbsp; Explore companies</RouterLink><div class="company-title"><div class="company-logo">L</div><div><div class="verified-label">✓ &nbsp;Verified company</div><h1>Linear</h1><p>Productivity software <span>·</span> San Francisco, CA <span>·</span> 51–200 people</p></div><button class="btn btn-outline follow">♡ &nbsp; Follow company</button></div><nav class="company-tabs"><a class="active">About</a><a>Open roles <i>12</i></a><a>Life at Linear</a></nav></div></section>
-  <section class="container company-detail-layout"><main><article class="company-story"><div class="eyebrow"><span class="eyebrow-dot"></span>A little about us</div><h2>Tools should feel like<br />an extension of your thinking.</h2><p>Linear is a purpose-built tool for planning and building products. We’re a team of designers, engineers, and thinkers who care deeply about making software feel clear, fast, and joyful.</p><p>Since 2019, we’ve been building for ambitious teams who believe there’s a better way to work. We’re remote-first, kind by default, and always looking for people who care about the details.</p><blockquote>“We believe the best work happens when people have the space, trust, and tools to do what they do best.”</blockquote></article><section class="values"><h2>What we believe in</h2><div class="values-grid"><div><span class="value-icon lilac">✳</span><h3>Thoughtful by default</h3><p>Care is a feature. We sweat the small things that add up to something great.</p></div><div><span class="value-icon blue">⌁</span><h3>Make space for focus</h3><p>Async-first means you can do deep work on your own terms.</p></div><div><span class="value-icon peach">↗</span><h3>Do it together</h3><p>We share context, invite different perspectives, and build as one team.</p></div></div></section><section class="open-roles"><div class="section-head"><div><h2>Open roles <span class="role-count">12</span></h2><p>Come build what’s next with us.</p></div><RouterLink to="/jobs" class="text-link">View all roles →</RouterLink></div><RouterLink v-for="job in jobs.slice(0,3)" :key="job.id" :to="`/jobs/${job.id}`" class="role-row"><div><strong>{{ job.title }}</strong><span>{{ job.location }}</span></div><span class="chip">{{ job.tags[0] }}</span><b>↗</b></RouterLink></section></main><aside><div class="company-facts card"><h3>At a glance</h3><div><span>✦</span><p><small>Industry</small><strong>Productivity software</strong></p></div><div><span>♙</span><p><small>Team size</small><strong>51–200 people</strong></p></div><div><span>⌖</span><p><small>Headquarters</small><strong>San Francisco, CA</strong></p></div><div><span>⌂</span><p><small>Working style</small><strong>Remote-first</strong></p></div><div><span>◷</span><p><small>Founded</small><strong>2019</strong></p></div><button class="btn btn-outline company-link">Visit company website ↗</button></div><div class="people-note card"><div class="facepile"><i>JM</i><i>SK</i><i>RL</i><i>+</i></div><p><strong>Good people, doing good work.</strong><br />Get to know the team behind Linear.</p></div></aside></section>
+  <section class="company-hero">
+    <div class="container">
+      <RouterLink to="/companies" class="back-link">← &nbsp; Explore companies</RouterLink>
+      <div class="company-title">
+        <div class="company-logo">L</div>
+        <div>
+          <div class="verified-label">✓ &nbsp;Verified company</div>
+          <h1>Linear</h1>
+          <p>Productivity software <span>·</span> San Francisco, CA <span>·</span> 51–200 people</p>
+        </div><button class="btn btn-outline follow">♡ &nbsp; Follow company</button>
+      </div>
+      <nav class="company-tabs"><a class="active">About</a><a>Open roles <i>12</i></a><a>Life at Linear</a></nav>
+    </div>
+  </section>
+  <section class="container company-detail-layout">
+    <main>
+      <article class="company-story">
+        <div class="eyebrow"><span class="eyebrow-dot"></span>A little about us</div>
+        <h2>Tools should feel like<br />an extension of your thinking.</h2>
+        <p>Linear is a purpose-built tool for planning and building products. We’re a team of designers, engineers, and
+          thinkers who care deeply about making software feel clear, fast, and joyful.</p>
+        <p>Since 2019, we’ve been building for ambitious teams who believe there’s a better way to work. We’re
+          remote-first, kind by default, and always looking for people who care about the details.</p>
+        <blockquote>“We believe the best work happens when people have the space, trust, and tools to do what they do
+          best.”</blockquote>
+      </article>
+      <section class="values">
+        <h2>What we believe in</h2>
+        <div class="values-grid">
+          <div><span class="value-icon lilac">✳</span>
+            <h3>Thoughtful by default</h3>
+            <p>Care is a feature. We sweat the small things that add up to something great.</p>
+          </div>
+          <div><span class="value-icon blue">⌁</span>
+            <h3>Make space for focus</h3>
+            <p>Async-first means you can do deep work on your own terms.</p>
+          </div>
+          <div><span class="value-icon peach">↗</span>
+            <h3>Do it together</h3>
+            <p>We share context, invite different perspectives, and build as one team.</p>
+          </div>
+        </div>
+      </section>
+      <section class="open-roles">
+        <div class="section-head">
+          <div>
+            <h2>Open roles <span class="role-count">12</span></h2>
+            <p>Come build what’s next with us.</p>
+          </div>
+          <RouterLink to="/jobs" class="text-link">View all roles →</RouterLink>
+        </div>
+        <RouterLink v-for="job in jobs.slice(0, 3)" :key="job.id" :to="`/jobs/${job.id}`" class="role-row">
+          <div><strong>{{ job.title }}</strong><span>{{ job.location }}</span></div><span class="chip">{{ job.tags[0]
+          }}</span><b>↗</b>
+        </RouterLink>
+      </section>
+    </main>
+    <aside>
+      <div class="company-facts card">
+        <h3>At a glance</h3>
+        <div><span>✦</span>
+          <p><small>Industry</small><strong>Productivity software</strong></p>
+        </div>
+        <div><span>♙</span>
+          <p><small>Team size</small><strong>51–200 people</strong></p>
+        </div>
+        <div><span>⌖</span>
+          <p><small>Headquarters</small><strong>San Francisco, CA</strong></p>
+        </div>
+        <div><span>⌂</span>
+          <p><small>Working style</small><strong>Remote-first</strong></p>
+        </div>
+        <div><span>◷</span>
+          <p><small>Founded</small><strong>2019</strong></p>
+        </div><button class="btn btn-outline company-link">Visit company website ↗</button>
+      </div>
+      <div class="people-note card">
+        <div class="facepile"><i>JM</i><i>SK</i><i>RL</i><i>+</i></div>
+        <p><strong>Good people, doing good work.</strong><br />Get to know the team behind Linear.</p>
+      </div>
+    </aside>
+  </section>
 </template>
 <style scoped>
-.company-hero{padding-top:28px;border-bottom:1px solid var(--line);background:linear-gradient(120deg,#f8f8ff,#fff 75%)}.back-link{display:inline-block;margin-bottom:25px;color:#64748b;font-size:12px}.company-title{display:flex;align-items:center;gap:18px;padding-bottom:27px}.company-logo{width:68px;height:68px;display:grid;place-items:center;border-radius:20px;color:#5e6ad2;background:#f0f1ff;font-size:27px;font-weight:800}.verified-label{color:#16834c;font-size:12px;font-weight:800}.company-title h1{margin:6px 0;font-size:34px}.company-title p{margin:0;color:#64748b;font-size:12px}.company-title p span{margin:0 6px;color:#bcc4d0}.follow{margin-left:auto}.company-tabs{display:flex;gap:26px}.company-tabs a{position:relative;padding:12px 1px;color:#64748b;font-size:12px;font-weight:650}.company-tabs a.active{color:var(--brand)}.company-tabs a.active:after{position:absolute;right:0;bottom:-1px;left:0;height:2px;background:var(--brand);content:''}.company-tabs i{margin-left:5px;border-radius:99px;padding:3px 6px;color:#6654b8;background:#f1efff;font-size:12px;font-style:normal}.company-detail-layout{display:grid;grid-template-columns:minmax(0,1fr) 290px;gap:45px;padding-top:40px;padding-bottom:75px}.company-story h2{margin:13px 0 18px;font-size:32px}.company-story>p{max-width:650px;color:#64748b;font-size:14px;line-height:1.9}.company-story blockquote{margin:26px 0;padding:18px 20px;border-left:3px solid #8b5cf6;border-radius:0 12px 12px 0;color:#4f46a5;background:#f7f5ff;font-size:14px;font-weight:650;line-height:1.8}.values{margin-top:40px}.values h2,.open-roles h2{font-size:23px}.values-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.values-grid>div{padding:18px;border:1px solid var(--line);border-radius:14px}.value-icon{width:34px;height:34px;display:grid;place-items:center;border-radius:10px}.lilac{color:#7b55da;background:#f0ebff}.blue{color:#4e60dc;background:#e9edff}.peach{color:#c57151;background:#fff0e8}.values-grid h3{margin:13px 0 6px;font-size:14px}.values-grid p{margin:0;color:#64748b;font-size:12px;line-height:1.7}.open-roles{margin-top:43px}.open-roles .section-head{margin-bottom:12px}.open-roles h2{margin:0 0 7px}.open-roles .section-head p{font-size:12px}.role-count{display:inline-block;padding:4px 7px;border-radius:7px;color:#6654b8;background:#f1efff;font-size:12px;vertical-align:middle}.role-row{display:flex;align-items:center;gap:15px;padding:16px 5px;border-bottom:1px solid var(--line)}.role-row>div{flex:1}.role-row strong,.role-row span{display:block}.role-row strong{font-size:12px}.role-row>div span{margin-top:5px;color:#64748b;font-size:12px}.role-row>b{color:#aab2c0}.company-facts{padding:20px}.company-facts h3{margin-bottom:19px}.company-facts>div{display:flex;align-items:center;gap:11px;margin:15px 0}.company-facts>div>span{width:29px;height:29px;display:grid;place-items:center;border-radius:8px;color:#7557db;background:#f3f0ff;font-size:14px}.company-facts p{margin:0}.company-facts small,.company-facts strong{display:block}.company-facts small{margin-bottom:4px;color:#64748b;font-size:12px}.company-facts strong{font-size:12px}.company-link{width:100%;margin-top:9px;font-size:12px}.people-note{display:flex;align-items:center;gap:12px;margin-top:13px;padding:15px}.people-note p{margin:0;color:#64748b;font-size:12px;line-height:1.7}.people-note strong{color:#334155}@media(max-width:850px){.company-detail-layout{grid-template-columns:1fr;gap:25px}.company-detail-layout aside{display:grid;grid-template-columns:1fr 1fr;align-items:start}}@media(max-width:620px){.company-title{align-items:start;flex-wrap:wrap}.company-logo{width:52px;height:52px}.company-title h1{font-size:27px}.follow{width:100%;margin:0}.company-detail-layout aside{grid-template-columns:1fr}.values-grid{grid-template-columns:1fr}.company-story h2{font-size:27px}.company-tabs{gap:18px}}
+.company-hero {
+  padding-top: 28px;
+  border-bottom: 1px solid var(--line);
+  background: linear-gradient(120deg, #f8f8ff, #fff 75%)
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 25px;
+  color: #64748b;
+  font-size: 12px
+}
+
+.company-title {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding-bottom: 27px
+}
+
+.company-logo {
+  width: 68px;
+  height: 68px;
+  display: grid;
+  place-items: center;
+  border-radius: 20px;
+  color: #5e6ad2;
+  background: #f0f1ff;
+  font-size: 27px;
+  font-weight: 800
+}
+
+.verified-label {
+  color: #16834c;
+  font-size: 12px;
+  font-weight: 800
+}
+
+.company-title h1 {
+  margin: 6px 0;
+  font-size: 34px
+}
+
+.company-title p {
+  margin: 0;
+  color: #64748b;
+  font-size: 12px
+}
+
+.company-title p span {
+  margin: 0 6px;
+  color: #bcc4d0
+}
+
+.follow {
+  margin-left: auto
+}
+
+.company-tabs {
+  display: flex;
+  gap: 26px
+}
+
+.company-tabs a {
+  position: relative;
+  padding: 12px 1px;
+  color: #64748b;
+  font-size: 12px;
+  font-weight: 650
+}
+
+.company-tabs a.active {
+  color: var(--brand)
+}
+
+.company-tabs a.active:after {
+  position: absolute;
+  right: 0;
+  bottom: -1px;
+  left: 0;
+  height: 2px;
+  background: var(--brand);
+  content: ''
+}
+
+.company-tabs i {
+  margin-left: 5px;
+  border-radius: 99px;
+  padding: 3px 6px;
+  color: #6654b8;
+  background: #f1efff;
+  font-size: 12px;
+  font-style: normal
+}
+
+.company-detail-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 290px;
+  gap: 45px;
+  padding-top: 40px;
+  padding-bottom: 75px
+}
+
+.company-story h2 {
+  margin: 13px 0 18px;
+  font-size: 32px
+}
+
+.company-story>p {
+  max-width: 650px;
+  color: #64748b;
+  font-size: 14px;
+  line-height: 1.9
+}
+
+.company-story blockquote {
+  margin: 26px 0;
+  padding: 18px 20px;
+  border-left: 3px solid #8b5cf6;
+  border-radius: 0 12px 12px 0;
+  color: #4f46a5;
+  background: #f7f5ff;
+  font-size: 14px;
+  font-weight: 650;
+  line-height: 1.8
+}
+
+.values {
+  margin-top: 40px
+}
+
+.values h2,
+.open-roles h2 {
+  font-size: 23px
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px
+}
+
+.values-grid>div {
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: 14px
+}
+
+.value-icon {
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  border-radius: 10px
+}
+
+.lilac {
+  color: #7b55da;
+  background: #f0ebff
+}
+
+.blue {
+  color: #4e60dc;
+  background: #e9edff
+}
+
+.peach {
+  color: #c57151;
+  background: #fff0e8
+}
+
+.values-grid h3 {
+  margin: 13px 0 6px;
+  font-size: 14px
+}
+
+.values-grid p {
+  margin: 0;
+  color: #64748b;
+  font-size: 12px;
+  line-height: 1.7
+}
+
+.open-roles {
+  margin-top: 43px
+}
+
+.open-roles .section-head {
+  margin-bottom: 12px
+}
+
+.open-roles h2 {
+  margin: 0 0 7px
+}
+
+.open-roles .section-head p {
+  font-size: 12px
+}
+
+.role-count {
+  display: inline-block;
+  padding: 4px 7px;
+  border-radius: 7px;
+  color: #6654b8;
+  background: #f1efff;
+  font-size: 12px;
+  vertical-align: middle
+}
+
+.role-row {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 16px 5px;
+  border-bottom: 1px solid var(--line)
+}
+
+.role-row>div {
+  flex: 1
+}
+
+.role-row strong,
+.role-row span {
+  display: block
+}
+
+.role-row strong {
+  font-size: 12px
+}
+
+.role-row>div span {
+  margin-top: 5px;
+  color: #64748b;
+  font-size: 12px
+}
+
+.role-row>b {
+  color: #aab2c0
+}
+
+.company-facts {
+  padding: 20px
+}
+
+.company-facts h3 {
+  margin-bottom: 19px
+}
+
+.company-facts>div {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  margin: 15px 0
+}
+
+.company-facts>div>span {
+  width: 29px;
+  height: 29px;
+  display: grid;
+  place-items: center;
+  border-radius: 8px;
+  color: #7557db;
+  background: #f3f0ff;
+  font-size: 14px
+}
+
+.company-facts p {
+  margin: 0
+}
+
+.company-facts small,
+.company-facts strong {
+  display: block
+}
+
+.company-facts small {
+  margin-bottom: 4px;
+  color: #64748b;
+  font-size: 12px
+}
+
+.company-facts strong {
+  font-size: 12px
+}
+
+.company-link {
+  width: 100%;
+  margin-top: 9px;
+  font-size: 12px
+}
+
+.people-note {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 13px;
+  padding: 15px
+}
+
+.people-note p {
+  margin: 0;
+  color: #64748b;
+  font-size: 12px;
+  line-height: 1.7
+}
+
+.people-note strong {
+  color: #334155
+}
+
+@media(max-width:850px) {
+  .company-detail-layout {
+    grid-template-columns: 1fr;
+    gap: 25px
+  }
+
+  .company-detail-layout aside {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: start
+  }
+}
+
+@media(max-width:620px) {
+  .company-title {
+    align-items: start;
+    flex-wrap: wrap
+  }
+
+  .company-logo {
+    width: 52px;
+    height: 52px
+  }
+
+  .company-title h1 {
+    font-size: 27px
+  }
+
+  .follow {
+    width: 100%;
+    margin: 0
+  }
+
+  .company-detail-layout aside {
+    grid-template-columns: 1fr
+  }
+
+  .values-grid {
+    grid-template-columns: 1fr
+  }
+
+  .company-story h2 {
+    font-size: 27px
+  }
+
+  .company-tabs {
+    gap: 18px
+  }
+}
 </style>

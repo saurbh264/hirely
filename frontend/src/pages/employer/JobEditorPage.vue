@@ -1,10 +1,428 @@
 <template>
-  <div class="workspace-heading editor-heading"><div><RouterLink to="/employer/jobs" class="back-link">← &nbsp; All roles</RouterLink><h1>Create a new role</h1><p>Good people are looking for their next beginning. Tell them about yours.</p></div><div class="editor-actions"><button class="btn btn-outline">Save as draft</button><button class="btn btn-primary">Preview &amp; publish <span>→</span></button></div></div>
-  <div class="editor-layout"><main class="editor-main"><section class="card editor-section"><div class="section-title"><span>01</span><div><h2>The essentials</h2><p>Start with the basics about this opportunity.</p></div></div><div class="form-grid"><label class="field full"><span>Job title <b>*</b></span><input class="input" placeholder="e.g. Senior Product Designer" /></label><label class="field"><span>Department <b>*</b></span><select class="select"><option>Select a department</option><option>Design</option><option>Engineering</option><option>Marketing</option></select></label><label class="field"><span>Employment type <b>*</b></span><select class="select"><option>Full-time</option><option>Contract</option><option>Part-time</option></select></label><label class="field"><span>Workplace <b>*</b></span><select class="select"><option>Remote</option><option>Hybrid</option><option>On-site</option></select></label><label class="field"><span>Location</span><input class="input" placeholder="City, state, or anywhere" /></label></div></section>
-    <section class="card editor-section"><div class="section-title"><span>02</span><div><h2>Make the opportunity clear</h2><p>Share what makes the work meaningful.</p></div></div><label class="field"><span>About the role <b>*</b></span><div class="fake-editor"><div class="editor-toolbar"><button><b>B</b></button><button><i>I</i></button><button>U</button><i></i><button>• List</button><button>1. List</button><button>↗ Link</button></div><textarea placeholder="What will this person work on? What makes this role worth getting excited about?"></textarea><small>Markdown supported · 0 / 3,000 characters</small></div></label><label class="field spaced"><span>What you’ll do <b>*</b></span><textarea class="textarea" placeholder="Describe the impact, responsibilities, and opportunities..." /></label><label class="field spaced"><span>What we’re looking for</span><textarea class="textarea" placeholder="The skills and experience that will help someone thrive..." /></label></section>
-    <section class="card editor-section"><div class="section-title"><span>03</span><div><h2>Compensation &amp; benefits</h2><p>Clear ranges help the right people see themselves here.</p></div></div><div class="form-grid"><label class="field"><span>Minimum salary <b>*</b></span><div class="input-prefix"><i>$</i><input placeholder="120,000" /></div></label><label class="field"><span>Maximum salary <b>*</b></span><div class="input-prefix"><i>$</i><input placeholder="160,000" /></div></label><label class="field full"><span>Benefits &amp; perks</span><div class="tag-input"><span>Health insurance <b>×</b></span><span>Flexible time off <b>×</b></span><span>Home office budget <b>×</b></span><i>＋ Add a benefit</i></div></label></div></section></main>
-    <aside class="editor-aside"><div class="card preview-card"><div class="preview-top"><span>LIVE PREVIEW</span><span>↗</span></div><div class="preview-brand"><div class="icon-box">N</div><span>Northstar Studio</span></div><h3>Your role title</h3><p>Department · Workplace · Location</p><div class="preview-salary">$120,000 – $160,000 <small>/ year</small></div><div class="divider" style="margin:15px 0"></div><div class="preview-block"><strong>About the role</strong><p>Your story will begin here. A little context goes a long way.</p></div><div class="preview-block"><strong>What you’ll do</strong><p>Your responsibilities will appear in a clear, easy-to-read format.</p></div><button class="btn btn-primary" style="width:100%;margin-top:6px">Apply for this role</button></div><div class="editor-tip"><span>✦</span><div><strong>A little care goes a long way.</strong><p>Roles with a clear salary range and thoughtful description get more of the right attention.</p></div></div></aside></div>
+  <div class="workspace-heading editor-heading">
+    <div>
+      <RouterLink to="/employer/jobs" class="back-link">← &nbsp; All roles</RouterLink>
+      <h1>Create a new role</h1>
+      <p>Good people are looking for their next beginning. Tell them about yours.</p>
+    </div>
+    <div class="editor-actions"><button class="btn btn-outline">Save as draft</button><button
+        class="btn btn-primary">Preview &amp; publish <span>→</span></button></div>
+  </div>
+  <div class="editor-layout">
+    <main class="editor-main">
+      <section class="card editor-section">
+        <div class="section-title"><span>01</span>
+          <div>
+            <h2>The essentials</h2>
+            <p>Start with the basics about this opportunity.</p>
+          </div>
+        </div>
+        <div class="form-grid"><label class="field full"><span>Job title <b>*</b></span><input class="input"
+              placeholder="e.g. Senior Product Designer" /></label><label class="field"><span>Department
+              <b>*</b></span><select class="select">
+              <option>Select a department</option>
+              <option>Design</option>
+              <option>Engineering</option>
+              <option>Marketing</option>
+            </select></label><label class="field"><span>Employment type <b>*</b></span><select class="select">
+              <option>Full-time</option>
+              <option>Contract</option>
+              <option>Part-time</option>
+            </select></label><label class="field"><span>Workplace <b>*</b></span><select class="select">
+              <option>Remote</option>
+              <option>Hybrid</option>
+              <option>On-site</option>
+            </select></label><label class="field"><span>Location</span><input class="input"
+              placeholder="City, state, or anywhere" /></label></div>
+      </section>
+      <section class="card editor-section">
+        <div class="section-title"><span>02</span>
+          <div>
+            <h2>Make the opportunity clear</h2>
+            <p>Share what makes the work meaningful.</p>
+          </div>
+        </div><label class="field"><span>About the role <b>*</b></span>
+          <div class="fake-editor">
+            <div class="editor-toolbar">
+              <button><b>B</b></button><button><i>I</i></button><button>U</button><i></i><button>•
+                List</button><button>1. List</button><button>↗ Link</button></div><textarea
+              placeholder="What will this person work on? What makes this role worth getting excited about?"></textarea><small>Markdown
+              supported · 0 / 3,000 characters</small>
+          </div>
+        </label><label class="field spaced"><span>What you’ll do <b>*</b></span><textarea class="textarea"
+            placeholder="Describe the impact, responsibilities, and opportunities..." /></label><label
+          class="field spaced"><span>What we’re looking for</span><textarea class="textarea"
+            placeholder="The skills and experience that will help someone thrive..." /></label>
+      </section>
+      <section class="card editor-section">
+        <div class="section-title"><span>03</span>
+          <div>
+            <h2>Compensation &amp; benefits</h2>
+            <p>Clear ranges help the right people see themselves here.</p>
+          </div>
+        </div>
+        <div class="form-grid"><label class="field"><span>Minimum salary <b>*</b></span>
+            <div class="input-prefix"><i>$</i><input placeholder="120,000" /></div>
+          </label><label class="field"><span>Maximum salary <b>*</b></span>
+            <div class="input-prefix"><i>$</i><input placeholder="160,000" /></div>
+          </label><label class="field full"><span>Benefits &amp; perks</span>
+            <div class="tag-input"><span>Health insurance <b>×</b></span><span>Flexible time off
+                <b>×</b></span><span>Home office budget <b>×</b></span><i>＋ Add a benefit</i></div>
+          </label></div>
+      </section>
+    </main>
+    <aside class="editor-aside">
+      <div class="card preview-card">
+        <div class="preview-top"><span>LIVE PREVIEW</span><span>↗</span></div>
+        <div class="preview-brand">
+          <div class="icon-box">N</div><span>Northstar Studio</span>
+        </div>
+        <h3>Your role title</h3>
+        <p>Department · Workplace · Location</p>
+        <div class="preview-salary">$120,000 – $160,000 <small>/ year</small></div>
+        <div class="divider" style="margin:15px 0"></div>
+        <div class="preview-block"><strong>About the role</strong>
+          <p>Your story will begin here. A little context goes a long way.</p>
+        </div>
+        <div class="preview-block"><strong>What you’ll do</strong>
+          <p>Your responsibilities will appear in a clear, easy-to-read format.</p>
+        </div><button class="btn btn-primary" style="width:100%;margin-top:6px">Apply for this role</button>
+      </div>
+      <div class="editor-tip"><span>✦</span>
+        <div><strong>A little care goes a long way.</strong>
+          <p>Roles with a clear salary range and thoughtful description get more of the right attention.</p>
+        </div>
+      </div>
+    </aside>
+  </div>
 </template>
 <style scoped>
-.back-link{display:block;margin-bottom:9px;color:#64748b;font-size:12px}.editor-heading{align-items:end}.editor-actions{display:flex;gap:8px}.editor-layout{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:16px}.editor-main{display:grid;align-content:start;gap:14px}.editor-section{padding:22px}.section-title{display:flex;align-items:start;gap:12px;margin-bottom:20px}.section-title>span{width:27px;height:27px;display:grid;place-items:center;border-radius:8px;color:#7355d5;background:#f1edff;font-size:12px;font-weight:800}.section-title h2{margin:1px 0 5px;font-size:15px;letter-spacing:-.03em}.section-title p{margin:0;color:#64748b;font-size:12px}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:15px}.field{gap:7px}.field>span{color:#334155;font-size:12px;font-weight:700}.field>span b{color:#e26767}.field.full{grid-column:span 2}.field .input,.field .select{min-height:42px;font-size:12px}.fake-editor{overflow:hidden;border:1px solid var(--line);border-radius:11px}.editor-toolbar{display:flex;align-items:center;gap:14px;padding:10px 12px;border-bottom:1px solid var(--line);color:#64748b}.editor-toolbar button{border:0;color:#64748b;background:none;font-size:12px}.editor-toolbar>i{height:15px;border-left:1px solid var(--line)}.fake-editor textarea{width:100%;height:98px;resize:vertical;border:0;outline:0;padding:12px;font-size:12px}.fake-editor textarea::placeholder,.textarea::placeholder{color:#64748b}.fake-editor small{display:block;padding:0 12px 10px;color:#64748b;font-size:12px}.spaced{margin-top:16px}.field .textarea{min-height:85px;font-size:12px}.input-prefix{display:flex;align-items:center;height:42px;border:1px solid var(--line);border-radius:11px}.input-prefix i{padding-left:13px;color:#64748b;font-size:12px;font-style:normal}.input-prefix input{width:100%;height:100%;border:0;outline:0;padding:0 9px;color:#0f172a;font-size:12px}.tag-input{display:flex;flex-wrap:wrap;align-items:center;gap:7px;min-height:42px;padding:7px;border:1px solid var(--line);border-radius:11px}.tag-input span{padding:7px 8px;border-radius:7px;color:#556171;background:#f2f4f8;font-size:12px}.tag-input b{margin-left:4px;color:#96a0ae}.tag-input i{color:#7160c8;font-size:12px;font-style:normal;font-weight:700}.preview-card{padding:18px}.preview-top{display:flex;justify-content:space-between;color:#64748b;font-size:12px;font-weight:800;letter-spacing:.1em}.preview-brand{display:flex;align-items:center;gap:9px;margin:22px 0 17px;color:#64748b;font-size:12px}.preview-brand .icon-box{width:34px;height:34px}.preview-card h3{font-size:15px}.preview-card>p{color:#64748b;font-size:12px}.preview-salary{color:#111827;font-size:12px;font-weight:800}.preview-salary small{color:#64748b;font-size:12px;font-weight:500}.preview-block{margin:13px 0}.preview-block strong{font-size:12px}.preview-block p{margin:5px 0;color:#64748b;font-size:12px;line-height:1.7}.editor-tip{display:flex;gap:10px;margin-top:12px;padding:14px;border:1px solid #eeeafc;border-radius:13px;background:#faf9ff}.editor-tip>span{color:#7355d5}.editor-tip strong{font-size:12px}.editor-tip p{margin:5px 0 0;color:#64748b;font-size:12px;line-height:1.6}@media(max-width:980px){.editor-layout{grid-template-columns:1fr}.editor-aside{display:none}}@media(max-width:650px){.editor-actions{width:100%}.editor-actions .btn{flex:1;padding-inline:8px;font-size:12px}.form-grid{grid-template-columns:1fr}.field.full{grid-column:auto}.editor-section{padding:16px}}
+.back-link {
+  display: block;
+  margin-bottom: 9px;
+  color: #64748b;
+  font-size: 12px
+}
+
+.editor-heading {
+  align-items: end
+}
+
+.editor-actions {
+  display: flex;
+  gap: 8px
+}
+
+.editor-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 300px;
+  gap: 16px
+}
+
+.editor-main {
+  display: grid;
+  align-content: start;
+  gap: 14px
+}
+
+.editor-section {
+  padding: 22px
+}
+
+.section-title {
+  display: flex;
+  align-items: start;
+  gap: 12px;
+  margin-bottom: 20px
+}
+
+.section-title>span {
+  width: 27px;
+  height: 27px;
+  display: grid;
+  place-items: center;
+  border-radius: 8px;
+  color: #7355d5;
+  background: #f1edff;
+  font-size: 12px;
+  font-weight: 800
+}
+
+.section-title h2 {
+  margin: 1px 0 5px;
+  font-size: 15px;
+  letter-spacing: -.03em
+}
+
+.section-title p {
+  margin: 0;
+  color: #64748b;
+  font-size: 12px
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px
+}
+
+.field {
+  gap: 7px
+}
+
+.field>span {
+  color: #334155;
+  font-size: 12px;
+  font-weight: 700
+}
+
+.field>span b {
+  color: #e26767
+}
+
+.field.full {
+  grid-column: span 2
+}
+
+.field .input,
+.field .select {
+  min-height: 42px;
+  font-size: 12px
+}
+
+.fake-editor {
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 11px
+}
+
+.editor-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--line);
+  color: #64748b
+}
+
+.editor-toolbar button {
+  border: 0;
+  color: #64748b;
+  background: none;
+  font-size: 12px
+}
+
+.editor-toolbar>i {
+  height: 15px;
+  border-left: 1px solid var(--line)
+}
+
+.fake-editor textarea {
+  width: 100%;
+  height: 98px;
+  resize: vertical;
+  border: 0;
+  outline: 0;
+  padding: 12px;
+  font-size: 12px
+}
+
+.fake-editor textarea::placeholder,
+.textarea::placeholder {
+  color: #64748b
+}
+
+.fake-editor small {
+  display: block;
+  padding: 0 12px 10px;
+  color: #64748b;
+  font-size: 12px
+}
+
+.spaced {
+  margin-top: 16px
+}
+
+.field .textarea {
+  min-height: 85px;
+  font-size: 12px
+}
+
+.input-prefix {
+  display: flex;
+  align-items: center;
+  height: 42px;
+  border: 1px solid var(--line);
+  border-radius: 11px
+}
+
+.input-prefix i {
+  padding-left: 13px;
+  color: #64748b;
+  font-size: 12px;
+  font-style: normal
+}
+
+.input-prefix input {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  outline: 0;
+  padding: 0 9px;
+  color: #0f172a;
+  font-size: 12px
+}
+
+.tag-input {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 7px;
+  min-height: 42px;
+  padding: 7px;
+  border: 1px solid var(--line);
+  border-radius: 11px
+}
+
+.tag-input span {
+  padding: 7px 8px;
+  border-radius: 7px;
+  color: #556171;
+  background: #f2f4f8;
+  font-size: 12px
+}
+
+.tag-input b {
+  margin-left: 4px;
+  color: #96a0ae
+}
+
+.tag-input i {
+  color: #7160c8;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700
+}
+
+.preview-card {
+  padding: 18px
+}
+
+.preview-top {
+  display: flex;
+  justify-content: space-between;
+  color: #64748b;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: .1em
+}
+
+.preview-brand {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin: 22px 0 17px;
+  color: #64748b;
+  font-size: 12px
+}
+
+.preview-brand .icon-box {
+  width: 34px;
+  height: 34px
+}
+
+.preview-card h3 {
+  font-size: 15px
+}
+
+.preview-card>p {
+  color: #64748b;
+  font-size: 12px
+}
+
+.preview-salary {
+  color: #111827;
+  font-size: 12px;
+  font-weight: 800
+}
+
+.preview-salary small {
+  color: #64748b;
+  font-size: 12px;
+  font-weight: 500
+}
+
+.preview-block {
+  margin: 13px 0
+}
+
+.preview-block strong {
+  font-size: 12px
+}
+
+.preview-block p {
+  margin: 5px 0;
+  color: #64748b;
+  font-size: 12px;
+  line-height: 1.7
+}
+
+.editor-tip {
+  display: flex;
+  gap: 10px;
+  margin-top: 12px;
+  padding: 14px;
+  border: 1px solid #eeeafc;
+  border-radius: 13px;
+  background: #faf9ff
+}
+
+.editor-tip>span {
+  color: #7355d5
+}
+
+.editor-tip strong {
+  font-size: 12px
+}
+
+.editor-tip p {
+  margin: 5px 0 0;
+  color: #64748b;
+  font-size: 12px;
+  line-height: 1.6
+}
+
+@media(max-width:980px) {
+  .editor-layout {
+    grid-template-columns: 1fr
+  }
+
+  .editor-aside {
+    display: none
+  }
+}
+
+@media(max-width:650px) {
+  .editor-actions {
+    width: 100%
+  }
+
+  .editor-actions .btn {
+    flex: 1;
+    padding-inline: 8px;
+    font-size: 12px
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr
+  }
+
+  .field.full {
+    grid-column: auto
+  }
+
+  .editor-section {
+    padding: 16px
+  }
+}
 </style>
