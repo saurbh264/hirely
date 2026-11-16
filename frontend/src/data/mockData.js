@@ -1,0 +1,17 @@
+export const jobs = [
+  { id: 'senior-product-designer', title: 'Senior Product Designer', company: 'Linear', location: 'Remote · North America', salary: '$145k – $180k', posted: '2 days ago', tags: ['Product design', 'Figma', 'Remote'], mark: 'L', color: '#5e6ad2', tint: '#f0f1ff', description: 'Shape the tools that help the world’s best teams build software.' },
+  { id: 'brand-designer', title: 'Brand Designer', company: 'Notion', location: 'San Francisco, CA', salary: '$120k – $155k', posted: '1 day ago', tags: ['Brand', 'Visual design', 'Hybrid'], mark: 'N', color: '#101010', tint: '#f4f4f4', description: 'Bring a thoughtful visual voice to the workspace for your life’s work.' },
+  { id: 'product-manager', title: 'Product Manager, Growth', company: 'Figma', location: 'New York, NY · Hybrid', salary: '$150k – $195k', posted: '3 days ago', tags: ['Product', 'Growth', 'Hybrid'], mark: 'F', color: '#8f5bff', tint: '#f5efff', description: 'Help more people turn ideas into products they love.' },
+  { id: 'frontend-engineer', title: 'Frontend Engineer', company: 'Vercel', location: 'Remote · US & Canada', salary: '$160k – $210k', posted: 'Today', tags: ['React', 'TypeScript', 'Remote'], mark: '▲', color: '#111827', tint: '#f1f5f9', description: 'Build the future of the web with a team that ships every day.' },
+  { id: 'ux-researcher', title: 'UX Researcher', company: 'Airbnb', location: 'Seattle, WA · Hybrid', salary: '$135k – $170k', posted: '4 days ago', tags: ['Research', 'Consumer', 'Hybrid'], mark: 'A', color: '#ff5a5f', tint: '#fff0f0', description: 'Uncover the insights that make every trip feel like belonging.' },
+  { id: 'content-strategist', title: 'Content Strategist', company: 'Webflow', location: 'Remote · US', salary: '$105k – $138k', posted: '5 days ago', tags: ['Content', 'Strategy', 'Remote'], mark: 'W', color: '#4353ff', tint: '#eef0ff', description: 'Make the web more expressive, one story at a time.' },
+]
+
+export const companies = [
+  { id: 'linear', name: 'Linear', category: 'Productivity software', location: 'San Francisco, CA', open: 12, mark: 'L', color: '#5e6ad2', tint: '#f0f1ff', description: 'The issue tracking tool you’ll enjoy using. Linear helps product teams plan and build products.' },
+  { id: 'notion', name: 'Notion', category: 'Software development', location: 'San Francisco, CA', open: 18, mark: 'N', color: '#101010', tint: '#f4f4f4', description: 'One workspace. Every team. Notion brings your docs, projects, and knowledge together.' },
+  { id: 'figma', name: 'Figma', category: 'Design tools', location: 'New York, NY', open: 9, mark: 'F', color: '#8f5bff', tint: '#f5efff', description: 'Figma makes design accessible to everyone and helps teams work together.' },
+  { id: 'vercel', name: 'Vercel', category: 'Developer tools', location: 'Remote first', open: 14, mark: '▲', color: '#111827', tint: '#f1f5f9', description: 'Vercel is the platform for frontend developers, providing the speed and reliability innovators need.' },
+  { id: 'airbnb', name: 'Airbnb', category: 'Travel & hospitality', location: 'San Francisco, CA', open: 7, mark: 'A', color: '#ff5a5f', tint: '#fff0f0', description: 'Create a world where anyone can belong anywhere.' },
+  { id: 'webflow', name: 'Webflow', category: 'Web design', location: 'Remote first', open: 11, mark: 'W', color: '#4353ff', tint: '#eef0ff', description: 'Webflow empowers designers to build production-ready websites without code.' },
+]
