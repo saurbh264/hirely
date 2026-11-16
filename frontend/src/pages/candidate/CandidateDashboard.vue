@@ -1,5 +1,5 @@
 <script setup>
-import StatCard from '@/components/common/StatCard.vue'
+import StatCard from '@/components/dashboard/StatCard.vue'
 import { jobs } from '@/data/mockData'
 </script>
 <template>

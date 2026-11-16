@@ -1,6 +1,6 @@
 <script setup>
 import PageIntro from '@/components/common/PageIntro.vue'
-import JobCard from '@/components/common/JobCard.vue'
+import JobCard from '@/components/jobs/JobCard.vue'
 import { jobs } from '@/data/mockData'
 </script>
 <template>

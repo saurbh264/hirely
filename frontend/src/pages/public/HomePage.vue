@@ -1,5 +1,5 @@
 <script setup>
-import JobCard from '@/components/common/JobCard.vue'
+import JobCard from '@/components/jobs/JobCard.vue'
 import { jobs, companies } from '@/data/mockData'
 </script>
 <template>
